@@ -8,47 +8,65 @@
 <style>
   :root{--orange:#D97706;--brown:#7C3F16;--cream:#FFF7ED;--ink:#2B160B;--muted:#6b5b50;--lens:#2563EB;--bg:#fbf7f2}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:24px 18px;max-width:760px;margin:0 auto}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:28px 18px 40px;max-width:760px;margin:0 auto}
   a{color:var(--orange);text-decoration:none}
   a:hover{text-decoration:underline}
-  header.site{display:flex;align-items:center;gap:14px}
-  header.site .logo{font-size:2.2rem}
-  header.site h1{font-size:1.5rem;color:var(--brown)}
-  .tag{color:var(--muted);font-size:.9rem;margin-top:2px}
-  nav{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 26px;font-size:.92rem}
+
+  /* HERO: Logo groß & mittig, Rest darunter */
+  .hero{text-align:center;margin-bottom:26px}
+  .hero .brand-logo{width:160px;height:160px;display:block;margin:0 auto 16px;filter:drop-shadow(0 6px 14px rgba(124,63,22,.18))}
+  .hero h1{font-size:1.9rem;color:var(--brown);letter-spacing:-.01em}
+  .hero h1 .lens{color:var(--lens)}
+  .hero .tag{color:var(--muted);font-size:.95rem;margin-top:6px}
+
+  .cta{display:inline-block;background:var(--orange);color:#fff;font-weight:600;padding:12px 20px;border-radius:12px;margin-top:18px;font-size:.95rem}
+  .cta:hover{background:#b45309;text-decoration:none}
+  .cta.soon{background:#e7d6c4;color:#7a6650;cursor:default}
+
+  nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin:22px 0 26px;font-size:.92rem}
+
   .card{background:#fff;border:1px solid #ecdfd2;border-radius:14px;padding:18px 20px;margin-bottom:16px}
   h2{font-size:1.05rem;color:var(--brown);margin:0 0 8px}
   ul{margin:6px 0 4px 20px}
   li{margin:3px 0}
+  ol.howto{margin:4px 0 2px 22px}
+  ol.howto li{margin:7px 0;padding-left:2px}
+  ol.howto li strong{color:var(--brown)}
   .pill{display:inline-block;background:var(--cream);color:var(--brown);border:1px solid #f0e0cf;border-radius:20px;padding:4px 11px;font-size:.8rem;margin:3px 5px 3px 0}
-  .lens{color:var(--lens)}
-  .cta{display:inline-block;background:var(--orange);color:#fff;font-weight:600;padding:11px 18px;border-radius:12px;margin:0 0 22px;font-size:.95rem}
-  .cta:hover{background:#b45309;text-decoration:none}
-  .cta.soon{background:#e7d6c4;color:#7a6650;cursor:default}
-  footer{margin-top:26px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:14px}
+  footer{margin-top:26px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:14px;text-align:center}
 </style>
 </head>
 <body>
-  <header class="site">
-    <div class="logo">🦊</div>
-    <div>
-      <h1>FehlerFuchs <span class="lens">Mobile Report</span></h1>
-      <div class="tag">Lokales Melde-Logbuch für Geräte · Android · Beta</div>
-    </div>
-  </header>
+
+  <section class="hero">
+    <svg class="brand-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FehlerFuchs Logo">
+      <path d="M96,96 L186,150 L256,185 L326,150 L416,96 L396,250 L256,440 L116,250 Z" fill="#D97706"/>
+      <path d="M132,120 L186,150 L158,182 Z" fill="#7C3F16"/>
+      <path d="M380,120 L326,150 L354,182 Z" fill="#7C3F16"/>
+      <path d="M198,250 L314,250 L256,430 Z" fill="#FFF7ED"/>
+      <path d="M192,228 L232,222 L214,250 Z" fill="#2B160B"/>
+      <circle cx="306" cy="236" r="30" fill="#7C3F16"/>
+      <circle cx="306" cy="236" r="22" fill="#0E2540"/>
+      <circle cx="306" cy="236" r="13" fill="#2563EB"/>
+      <circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
+      <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+    </svg>
+    <h1>FehlerFuchs <span class="lens">Mobile Report</span></h1>
+    <p class="tag">Lokales Melde-Logbuch für Geräte · Android · Beta</p>
+
+    <!--
+      Play-Store-Button: sobald die App im Play Store ist, hier class="cta" (statt "cta soon"),
+      href auf die Store-URL setzen, Text "▶ Get it on Google Play".
+      Store-URL-Schema: https://play.google.com/store/apps/details?id=de.fehlerfuchs.mobilereport
+    -->
+    <div><a class="cta soon">▶ Bald im Google Play Store</a></div>
+  </section>
 
   <nav>
     <a href="index.html">Start</a>
     <a href="datenschutz.html">Datenschutz</a>
     <a href="impressum.html">Impressum</a>
   </nav>
-
-  <!--
-    Play-Store-Button: sobald die App im Play Store ist, diese Zeile aktivieren –
-    class="cta" (statt "cta soon"), href auf die Store-URL setzen, Text "▶ Get it on Google Play".
-    Store-URL-Schema: https://play.google.com/store/apps/details?id=de.fehlerfuchs.mobilereport
-  -->
-  <a class="cta soon">▶ Bald im Google Play Store</a>
 
   <div class="card">
     <h2>Was ist FehlerFuchs?</h2>
@@ -66,6 +84,17 @@
       <li>Lokales Logbuch aller auf diesem Gerät erstellten Meldungen</li>
       <li>Alle Daten jederzeit lokal löschbar</li>
     </ul>
+  </div>
+
+  <div class="card">
+    <h2>Kurzanleitung – so funktioniert's</h2>
+    <ol class="howto">
+      <li><strong>Meldung erfassen:</strong> Gerät, Bereich, Kategorie, Priorität und Beschreibung eintragen.</li>
+      <li><strong>Foto hinzufügen (optional):</strong> per Kamera oder Galerie – keine personenbezogenen oder sensiblen Inhalte fotografieren.</li>
+      <li><strong>PDF erstellen:</strong> „Speichern &amp; PDF erstellen" tippen und die Vorschau prüfen.</li>
+      <li><strong>E-Mail vorbereiten:</strong> „E-Mail vorbereiten" öffnet deine Mail-App mit Empfänger, Betreff und PDF-Anhang.</li>
+      <li><strong>Selbst senden &amp; bestätigen:</strong> in der Mail-App prüfen und senden – danach im Logbuch als „versendet" markieren.</li>
+    </ol>
   </div>
 
   <div class="card">
