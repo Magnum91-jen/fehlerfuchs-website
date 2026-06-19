@@ -9,13 +9,21 @@
 <style>
   :root{--orange:#D97706;--brown:#7C3F16;--cream:#FFF7ED;--ink:#2B160B;--muted:#6b5b50;--lens:#2563EB;--app:#15803D;--bg:#fbf7f2}
   /* --app = Akzentfarbe für das App-Kürzel „MR". Grün (#15803D). Für Blau auf #2563EB ändern. */
+  /* Markenschrift Poppins – selbst gehostet, KEIN externer Aufruf (Datenschutz). Lizenz: SIL OFL 1.1 (fonts/OFL.txt). */
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Medium.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:30px 20px 44px;max-width:860px;margin:0 auto}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:30px 20px 44px;max-width:860px;margin:0 auto}
   a{color:var(--orange);text-decoration:none}
   a:hover{text-decoration:underline}
+  h1,h2,h3{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 
-  .wm{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:800;fill:var(--brown);letter-spacing:-.5px}
-  .wm .mr{fill:var(--app);font-weight:900}
+  .wm{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;fill:var(--brown);letter-spacing:-.5px}
+  .wm .mr{fill:var(--app);font-weight:700}
 
   /* HERO */
   .hero{text-align:center;margin-bottom:40px}
@@ -131,7 +139,7 @@
     <!-- App 1: FehlerFuchsMR (aufklappbar) -->
     <details class="app-acc">
       <summary>
-        <svg class="lockup" viewBox="0 0 624 150" role="img" aria-label="FehlerFuchsMR">
+        <svg class="lockup" viewBox="0 0 650 150" role="img" aria-label="FehlerFuchsMR">
           <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
           <text class="wm" x="150" y="92" font-size="62">FehlerFuchs<tspan class="mr">MR</tspan></text>
         </svg>
