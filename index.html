@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FehlerFuchs Mobile Report</title>
+<meta name="description" content="FehlerFuchs Mobile Report: lokales Melde-Logbuch für Geräte. Foto, PDF, E-Mail – 100 % lokal, ohne Cloud und ohne Tracking.">
+<style>
+  :root{--orange:#D97706;--brown:#7C3F16;--cream:#FFF7ED;--ink:#2B160B;--muted:#6b5b50;--lens:#2563EB;--bg:#fbf7f2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:24px 18px;max-width:760px;margin:0 auto}
+  a{color:var(--orange);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header.site{display:flex;align-items:center;gap:14px}
+  header.site .logo{font-size:2.2rem}
+  header.site h1{font-size:1.5rem;color:var(--brown)}
+  .tag{color:var(--muted);font-size:.9rem;margin-top:2px}
+  nav{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 26px;font-size:.92rem}
+  .card{background:#fff;border:1px solid #ecdfd2;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+  h2{font-size:1.05rem;color:var(--brown);margin:0 0 8px}
+  ul{margin:6px 0 4px 20px}
+  li{margin:3px 0}
+  .pill{display:inline-block;background:var(--cream);color:var(--brown);border:1px solid #f0e0cf;border-radius:20px;padding:4px 11px;font-size:.8rem;margin:3px 5px 3px 0}
+  .lens{color:var(--lens)}
+  .cta{display:inline-block;background:var(--orange);color:#fff;font-weight:600;padding:11px 18px;border-radius:12px;margin:0 0 22px;font-size:.95rem}
+  .cta:hover{background:#b45309;text-decoration:none}
+  .cta.soon{background:#e7d6c4;color:#7a6650;cursor:default}
+  footer{margin-top:26px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:14px}
+</style>
+</head>
+<body>
+  <header class="site">
+    <div class="logo">🦊</div>
+    <div>
+      <h1>FehlerFuchs <span class="lens">Mobile Report</span></h1>
+      <div class="tag">Lokales Melde-Logbuch für Geräte · Android · Beta</div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+
+  <!--
+    Play-Store-Button: sobald die App im Play Store ist, diese Zeile aktivieren –
+    class="cta" (statt "cta soon"), href auf die Store-URL setzen, Text "▶ Get it on Google Play".
+    Store-URL-Schema: https://play.google.com/store/apps/details?id=de.fehlerfuchs.mobilereport
+  -->
+  <a class="cta soon">▶ Bald im Google Play Store</a>
+
+  <div class="card">
+    <h2>Was ist FehlerFuchs?</h2>
+    <p>Ein kleines, lokales Melde-Logbuch für Geräte. Erfasse schnell einen Defekt, eine Auffälligkeit oder eine Rückfrage, füge Fotos hinzu, erstelle ein PDF und bereite es als E-Mail vor – alles bleibt auf deinem Gerät.</p>
+  </div>
+
+  <div class="card">
+    <h2>Funktionen</h2>
+    <ul>
+      <li>Meldung erfassen: Gerät, Bereich, Kategorie, Priorität, Beschreibung</li>
+      <li>Fotos per Kamera oder Galerie (EXIF-/Standortdaten werden vorher entfernt)</li>
+      <li>PDF lokal erzeugen – mit fortlaufender Logbuch-Nummer</li>
+      <li>PDF per E-Mail-App vorbereiten (Empfänger, Betreff und Anhang vorausgefüllt)</li>
+      <li>Mehrere Empfänger lokal verwalten</li>
+      <li>Lokales Logbuch aller auf diesem Gerät erstellten Meldungen</li>
+      <li>Alle Daten jederzeit lokal löschbar</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Datenschutz zuerst</h2>
+    <p>
+      <span class="pill">Keine Cloud</span>
+      <span class="pill">Kein Tracking</span>
+      <span class="pill">Keine Telemetrie</span>
+      <span class="pill">Keine Werbung</span>
+      <span class="pill">Kein Konto</span>
+      <span class="pill">Nur lokal</span>
+    </p>
+    <p style="margin-top:8px">Die App erfasst keine Daten und überträgt nichts an den Entwickler oder Dritte. Sie versendet nicht selbst – du prüfst und sendest die E-Mail manuell über deine Mail-App.</p>
+  </div>
+
+  <div class="card">
+    <h2>Was es nicht ist</h2>
+    <p>Kein rechtssicheres Nachweissystem, kein zentrales Ticketsystem, keine Cloud-App, keine Bewertungs-, Freigabe- oder Diagnosesoftware. Bitte keine personenbezogenen oder sensiblen Inhalte erfassen oder fotografieren.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:info@fehlerfuchs.eu">info@fehlerfuchs.eu</a></p>
+  </div>
+
+  <footer>
+    © 2026 Matthias Schacht — FehlerFuchs Mobile Report. Alle Rechte vorbehalten. Bereitstellung „wie besehen", ohne Gewähr.
+  </footer>
+</body>
+</html>
