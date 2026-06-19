@@ -88,6 +88,8 @@
   .contact{max-width:760px;margin:0 0 8px}
   .contact h2{font-size:1.1rem;color:var(--brown);margin:0 0 6px}
   footer{margin-top:30px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:16px}
+  .sign{display:flex;align-items:center;gap:14px;margin-top:18px}
+  .sign-photo{width:66px;height:66px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:3px solid #fff;box-shadow:0 2px 10px rgba(43,22,11,.18);flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -104,6 +106,50 @@
       <circle cx="306" cy="236" r="13" fill="#2563EB"/>
       <circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
       <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+    </g>
+    <g id="fox-free">
+      <use href="#fox"/>
+      <g transform="translate(256,452) rotate(-10)">
+        <path d="M-118,-32 L-150,-2 L-118,8 Z" fill="#15803D"/>
+        <path d="M118,-32 L150,-2 L118,8 Z" fill="#15803D"/>
+        <path d="M-118,-32 L118,-32 L96,0 L118,32 L-118,32 L-96,0 Z" fill="#16A34A"/>
+        <text x="0" y="2" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="48" fill="#fff" text-anchor="middle" dominant-baseline="middle">Free</text>
+      </g>
+    </g>
+    <g id="fox-pro">
+      <use href="#fox"/>
+      <g transform="translate(256,452) rotate(-10)">
+        <path d="M-118,-32 L-150,-2 L-118,8 Z" fill="#B91C1C"/>
+        <path d="M118,-32 L150,-2 L118,8 Z" fill="#B91C1C"/>
+        <path d="M-118,-32 L118,-32 L96,0 L118,32 L-118,32 L-96,0 Z" fill="#DC2626"/>
+        <text x="0" y="2" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="48" fill="#fff" text-anchor="middle" dominant-baseline="middle">Pro</text>
+      </g>
+    </g>
+    <g id="foxm">
+      <use href="#fox"/>
+      <circle cx="306" cy="236" r="34" fill="none" stroke="#C2410C" stroke-width="4.5"/>
+      <path d="M306,272 C332,300 340,332 332,372" fill="none" stroke="#C2410C" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.5 9"/>
+      <circle cx="332" cy="375" r="4.5" fill="none" stroke="#C2410C" stroke-width="3"/>
+      <path d="M256,396 C240,405 228,406 224,392 C228,401 244,400 256,398 Z" fill="#2B160B"/>
+      <path d="M256,396 C272,405 284,406 288,392 C284,401 268,400 256,398 Z" fill="#2B160B"/>
+    </g>
+    <g id="foxm-free">
+      <use href="#foxm"/>
+      <g transform="translate(256,452) rotate(-10)">
+        <path d="M-118,-32 L-150,-2 L-118,8 Z" fill="#15803D"/>
+        <path d="M118,-32 L150,-2 L118,8 Z" fill="#15803D"/>
+        <path d="M-118,-32 L118,-32 L96,0 L118,32 L-118,32 L-96,0 Z" fill="#16A34A"/>
+        <text x="0" y="2" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="48" fill="#fff" text-anchor="middle" dominant-baseline="middle">Free</text>
+      </g>
+    </g>
+    <g id="foxm-pro">
+      <use href="#foxm"/>
+      <g transform="translate(256,452) rotate(-10)">
+        <path d="M-118,-32 L-150,-2 L-118,8 Z" fill="#B91C1C"/>
+        <path d="M118,-32 L150,-2 L118,8 Z" fill="#B91C1C"/>
+        <path d="M-118,-32 L118,-32 L96,0 L118,32 L-118,32 L-96,0 Z" fill="#DC2626"/>
+        <text x="0" y="2" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="48" fill="#fff" text-anchor="middle" dominant-baseline="middle">Pro</text>
+      </g>
     </g>
   </defs></svg>
 
@@ -122,15 +168,6 @@
     <a href="impressum.html">Impressum</a>
   </nav>
 
-  <section class="intro">
-    <h2>FehlerFuchs – die Idee</h2>
-    <p class="lead">Hinter FehlerFuchs steht kein riesiges Softwareunternehmen und kein großes Team – nur ich, Matze. Mich hat es schon immer gereizt, Abläufe einfacher zu machen: Dinge, die im Alltag umständlich sind, so lange zu drehen, bis sie rund laufen.</p>
-    <p>Die Apps entstehen komplett in meiner Freizeit – einfach, weil mir genau dieses Tüfteln Spaß macht. Mein Anspruch dabei: kleine, ehrliche Werkzeuge, die ein konkretes Problem lösen und sonst nichts. Datensparsam, ohne Cloud, ohne Tracking, ohne Konto – die Daten bleiben dort, wo sie hingehören: bei dir.</p>
-    <p>Aktuell sind alle Apps kostenlos und werbefrei. Ganz ehrlich: Ich bin gerade dabei, nebenbei ein kleines Gewerbe aufzubauen, und möchte damit irgendwann ein paar Euro nebenher verdienen. Solange die Gewerbeanmeldung nicht steht, bleibt alles frei – und auch danach soll FehlerFuchs fair, schlank und transparent bleiben.</p>
-    <p>FehlerFuchs ist der Rahmen, unter dem nach und nach mehrere solcher Helfer entstehen sollen. <strong>Mobile Report</strong> ist die erste App – weitere sind in Planung. Wenn dir etwas auffällt oder fehlt, freue ich mich über jede Rückmeldung.</p>
-    <p class="sign">— Matthias (Matze) von FehlerFuchs</p>
-  </section>
-
   <h2 class="apps-h">Apps &amp; Programme, die es dir leichter machen</h2>
   <p class="apps-sub">Eine App fürs Handy, dazu Programme für den PC – und es kommt noch mehr.</p>
 
@@ -140,7 +177,7 @@
     <details class="app-acc">
       <summary>
         <svg class="lockup" viewBox="0 0 650 150" role="img" aria-label="FehlerFuchsMR">
-          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <use href="#fox-free" transform="translate(8,-14) scale(0.34)"/>
           <text class="wm" x="150" y="92" font-size="62">FehlerFuchs<tspan class="mr">MR</tspan></text>
         </svg>
         <span class="sumright">
@@ -204,7 +241,7 @@
     <details class="app-acc biz-acc">
       <summary>
         <svg class="lockup" viewBox="0 0 815 150" role="img" aria-label="FehlerFuchsMR-Pro">
-          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <use href="#fox-pro" transform="translate(8,-14) scale(0.34)"/>
           <text class="wm" x="150" y="92" font-size="62">FehlerFuchs<tspan fill="#B91C1C" font-weight="900">MR</tspan><tspan>-Pro</tspan></text>
         </svg>
         <span class="sumright">
@@ -227,7 +264,7 @@
     <details class="app-acc">
       <summary>
         <svg class="lockup" viewBox="0 0 1004 150" role="img" aria-label="FehlerFuchs Kleingewerbe (Free)">
-          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <use href="#foxm-free" transform="translate(8,-14) scale(0.34)"/>
           <text class="wm" x="150" y="92" font-size="62">FehlerFuchs <tspan fill="#C2410C">Kleingewerbe</tspan></text>
         </svg>
         <span class="sumright">
@@ -255,7 +292,7 @@
     <details class="app-acc biz-acc">
       <summary>
         <svg class="lockup" viewBox="0 0 1150 150" role="img" aria-label="FehlerFuchs Kleingewerbe-Pro">
-          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <use href="#foxm-pro" transform="translate(8,-14) scale(0.34)"/>
           <text class="wm" x="150" y="92" font-size="62">FehlerFuchs <tspan fill="#C2410C">Kleingewerbe</tspan><tspan>-Pro</tspan></text>
         </svg>
         <span class="sumright">
@@ -273,7 +310,61 @@
       </div>
     </details>
 
+    <!-- Platzhalter: kommende Helfer -->
+    <details class="app-acc biz-acc">
+      <summary>
+        <svg class="lockup" viewBox="0 0 900 150" role="img" aria-label="Da kommt bestimmt noch was">
+          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <text class="wm" x="150" y="92" font-size="48" fill="var(--muted)">Da kommt bestimmt noch was …</text>
+        </svg>
+        <span class="sumright">
+          <span class="badge future">Idee</span>
+          <span class="more">
+            <span class="lbl-closed">Neugierig?</span>
+            <span class="lbl-open">Weniger anzeigen</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </span>
+        </span>
+      </summary>
+      <div class="app-body">
+        <p>Hier entsteht der nächste kleine Helfer. Noch ist es nur eine Idee im Hinterkopf – aber FehlerFuchs wächst Stück für Stück. Wenn dir etwas fehlt, das gut hierher passen würde, schreib mir gern: <a href="mailto:info@fehlerfuchs.eu?subject=Idee%20f%C3%BCr%20FehlerFuchs">info@fehlerfuchs.eu</a>.</p>
+      </div>
+    </details>
+
+    <!-- Platzhalter 2 -->
+    <details class="app-acc biz-acc">
+      <summary>
+        <svg class="lockup" viewBox="0 0 900 150" role="img" aria-label="Und da bestimmt auch noch was">
+          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <text class="wm" x="150" y="92" font-size="48" fill="var(--muted)">… und da bestimmt auch noch was</text>
+        </svg>
+        <span class="sumright">
+          <span class="badge future">in Planung</span>
+          <span class="more">
+            <span class="lbl-closed">Neugierig?</span>
+            <span class="lbl-open">Weniger anzeigen</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </span>
+        </span>
+      </summary>
+      <div class="app-body">
+        <p>FehlerFuchs ist als Rahmen für mehrere kleine Helfer gedacht. Was als Nächstes kommt, entscheidet sich daran, wo der Alltag am meisten hakt – beim Handy, am PC oder ganz woanders. Bleib gespannt.</p>
+      </div>
+    </details>
+
   </div>
+
+  <section class="intro">
+    <h2>FehlerFuchs – die Idee</h2>
+    <p class="lead">Hinter FehlerFuchs steht kein riesiges Softwareunternehmen und kein großes Team – nur ich, Matze. Mich hat es schon immer gereizt, Abläufe einfacher zu machen: Dinge, die im Alltag umständlich sind, so lange zu drehen, bis sie rund laufen.</p>
+    <p>Die Apps entstehen komplett in meiner Freizeit – einfach, weil mir genau dieses Tüfteln Spaß macht. Mein Anspruch dabei: kleine, ehrliche Werkzeuge, die ein konkretes Problem lösen und sonst nichts. Datensparsam, ohne Cloud, ohne Tracking, ohne Konto – die Daten bleiben dort, wo sie hingehören: bei dir.</p>
+    <p>Aktuell sind alle Apps kostenlos und werbefrei. Ganz ehrlich: Ich bin gerade dabei, nebenbei ein kleines Gewerbe aufzubauen, und möchte damit irgendwann ein paar Euro nebenher verdienen. Solange die Gewerbeanmeldung nicht steht, bleibt alles frei – und auch danach soll FehlerFuchs fair, schlank und transparent bleiben.</p>
+    <p>FehlerFuchs ist der Rahmen, unter dem nach und nach mehrere solcher Helfer entstehen sollen. <strong>Mobile Report</strong> ist die erste App – weitere sind in Planung. Wenn dir etwas auffällt oder fehlt, freue ich mich über jede Rückmeldung.</p>
+    <div class="sign">
+      <img class="sign-photo" src="img/matze-portrait-sw.jpg" alt="Matthias (Matze) von FehlerFuchs" loading="lazy" width="66" height="66">
+      <span>— Matthias (Matze) von FehlerFuchs</span>
+    </div>
+  </section>
 
   <section class="contact">
     <h2>Kontakt</h2>
