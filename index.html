@@ -91,6 +91,32 @@
   footer{margin-top:30px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:16px}
   .sign{display:flex;align-items:center;gap:14px;margin-top:18px}
   .sign-photo{width:66px;height:66px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:3px solid #fff;box-shadow:0 2px 10px rgba(43,22,11,.18);flex:0 0 auto}
+  .heroloop{width:min(560px,92vw);height:auto;display:block;margin:0 auto 22px}
+  .hl-head{transform-box:fill-box;transform-origin:50% 50%;animation:ff-head 30s ease-in-out infinite}
+  .hl-lens{transform-box:fill-box;transform-origin:50% 50%;animation:ff-eye 30s ease-in-out infinite}
+  .hl-lupe{transform-box:fill-box;transform-origin:50% 50%;animation:ff-lupe 30s ease-in-out infinite;opacity:0}
+  .hl-stairs{animation:ff-stairs 30s ease-in-out infinite;opacity:0}
+  @keyframes ff-head{
+   0%,30%{transform:translate(0,0) rotate(0) scaleX(1) scaleY(1)}
+   31%{transform:translate(8px,4px) rotate(3deg)}33%{transform:translate(0,0) rotate(0)}35%{transform:translate(8px,4px) rotate(3deg)}
+   36.7%,43%{transform:translate(0,0) rotate(0) scaleY(1)}
+   45.5%{transform:translate(0,22px) scaleY(.76)}47.5%{transform:translate(0,22px) scaleY(.76)}50%{transform:translate(0,0) scaleY(1)}
+   56%{transform:translate(0,0) rotate(0)}58%{transform:translate(10px,6px) rotate(4deg)}70%{transform:translate(10px,6px) rotate(4deg)}76%{transform:translate(0,0) rotate(0)}
+   81%{transform:translate(0,0) scaleX(1)}82.5%{transform:translate(0,0) scaleX(-1)}
+   85%{transform:translate(150px,12px) scaleX(-1)}87%{transform:translate(300px,26px) scaleX(-1)}89%{transform:translate(430px,44px) scaleX(-1)}90.5%{transform:translate(430px,44px) scaleX(-1)}
+   92%{transform:translate(220px,20px) scaleX(-1)}93.5%{transform:translate(0,0) scaleX(-1)}94.5%{transform:translate(0,0) scaleX(1)}100%{transform:translate(0,0)}
+  }
+  @keyframes ff-eye{
+   0%,6%{transform:scaleY(1)}7%,8%{transform:scaleY(.08)}9%,16%{transform:scaleY(1)}
+   17%,18%{transform:scaleY(.08)}19%,20%{transform:scaleY(1)}21%,22%{transform:scaleY(.08)}23%,59%{transform:scaleY(1)}
+   61%,69%{transform:scaleY(.45)}71%,96%{transform:scaleY(1)}97%,98%{transform:scaleY(.08)}99%,100%{transform:scaleY(1)}
+  }
+  @keyframes ff-lupe{
+   0%,56%{opacity:0;transform:translate(180px,-10px)}58%{opacity:1;transform:translate(120px,0)}62%{opacity:1;transform:translate(60px,4px)}
+   67%{opacity:1;transform:translate(0,0)}72%{opacity:1;transform:translate(-70px,4px)}74.5%{opacity:0;transform:translate(-120px,0)}76%,100%{opacity:0;transform:translate(180px,-10px)}
+  }
+  @keyframes ff-stairs{0%,79%{opacity:0}82%,92%{opacity:.9}95%,100%{opacity:0}}
+  @media (prefers-reduced-motion: reduce){.hl-head,.hl-lens,.hl-lupe,.hl-stairs{animation:none}.hl-lupe{opacity:0}}
 </style>
 </head>
 <body>
@@ -159,10 +185,35 @@
   </defs></svg>
 
   <section class="hero">
-    <svg class="brandmark" viewBox="0 92 512 420" role="img" aria-label="FehlerFuchs">
-      <use href="#fox"/>
-      <text class="wm" x="253" y="484" font-size="66" text-anchor="end" transform="rotate(5 253 484)">Fehler</text>
-      <text class="wm" x="259" y="484" font-size="66" text-anchor="start" transform="rotate(-5 259 484)">Fuchs</text>
+    <svg class="heroloop" viewBox="0 0 720 240" role="img" aria-label="FehlerFuchs">
+      <g class="hl-stairs" fill="#FFF1DF" stroke="#e7d8c8" stroke-width="2">
+        <polygon points="520,150 595,150 595,172 665,172 665,194 705,194 705,214 520,214"/>
+      </g>
+      <text class="wm" x="248" y="150" font-size="56">FehlerFuchs</text>
+      <g class="hl-head">
+        <g transform="translate(28,8) scale(0.42)">
+          <path d="M96,96 L186,150 L256,185 L326,150 L416,96 L396,250 L256,440 L116,250 Z" fill="#D97706"/>
+          <path d="M132,120 L186,150 L158,182 Z" fill="#7C3F16"/>
+          <path d="M380,120 L326,150 L354,182 Z" fill="#7C3F16"/>
+          <path d="M198,250 L314,250 L256,430 Z" fill="#FFF7ED"/>
+          <path d="M192,228 L232,222 L214,250 Z" fill="#2B160B"/>
+          <g class="hl-lens">
+            <circle cx="306" cy="236" r="30" fill="#7C3F16"/>
+            <circle cx="306" cy="236" r="22" fill="#0E2540"/>
+            <circle cx="306" cy="236" r="13" fill="#2563EB"/>
+            <circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
+          </g>
+          <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+        </g>
+      </g>
+      <g class="hl-lupe">
+        <g transform="translate(470,116)">
+          <circle cx="0" cy="0" r="30" fill="#7DD3FC" opacity="0.30"/>
+          <circle cx="0" cy="0" r="30" fill="none" stroke="#7C3F16" stroke-width="8"/>
+          <circle cx="0" cy="0" r="30" fill="none" stroke="#2563EB" stroke-width="2"/>
+          <line x1="22" y1="22" x2="48" y2="48" stroke="#7C3F16" stroke-width="11" stroke-linecap="round"/>
+        </g>
+      </g>
     </svg>
     <p class="tag">Kleine, lokale Helfer-Apps – datensparsam, ohne Cloud und ohne Tracking.</p>
   </section>
