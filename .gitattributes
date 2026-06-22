@@ -1,0 +1,21 @@
+# Zeilenenden projektweit auf LF normalisieren (verhindert CRLF-Diffs unter Windows)
+* text=auto eol=lf
+
+# Textbasierte Web-Quellen explizit als LF
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.svg  text eol=lf
+*.xml  text eol=lf
+*.txt  text eol=lf
+*.md   text eol=lf
+CNAME  text eol=lf
+
+# Binärdateien nie anfassen
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.webp binary
+*.woff  binary
+*.woff2 binary
