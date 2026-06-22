@@ -39,6 +39,15 @@
   .intro .lead{font-size:1.06rem;color:var(--ink)}
   .sign{color:var(--muted);font-size:.92rem;margin-top:4px}
 
+  /* LEITSAETZE / WERTE-BLOCK */
+  .leitsaetze{text-align:center;margin:0 0 40px}
+  .leitsaetze .ls-slogan{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;color:var(--orange);font-size:1.8rem;letter-spacing:-.5px;margin:0}
+  .leitsaetze .ls-sub{color:var(--muted);font-size:.96rem;margin:5px 0 22px}
+  .leitsaetze .ls-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 24px;text-align:left;max-width:740px;margin:0 auto;padding:0}
+  .leitsaetze .ls-item{position:relative;padding-left:20px;font-size:.95rem;color:var(--muted);line-height:1.5}
+  .leitsaetze .ls-item::before{content:"";position:absolute;left:0;top:.45em;width:9px;height:9px;border-radius:2px;background:var(--orange)}
+  .leitsaetze .ls-item b{color:var(--brown);font-weight:700}
+
   /* APP-BEREICH – horizontal, untereinander, aufklappbar */
   .apps-h{font-size:1.3rem;color:var(--brown);margin:0 0 4px}
   .apps-sub{color:var(--muted);font-size:.92rem;margin:0 0 18px}
@@ -238,6 +247,19 @@
     <a href="datenschutz.html">Datenschutz</a>
     <a href="impressum.html">Impressum</a>
   </nav>
+
+  <section class="leitsaetze" aria-label="Leitsätze und Werte von FehlerFuchs">
+    <p class="ls-slogan">Einfach kleine Helfer.</p>
+    <p class="ls-sub">Kleine, lokale Helfer-Apps – mit Haltung.</p>
+    <ul class="ls-grid">
+      <li class="ls-item"><b>Einfach &amp; ehrlich</b> – löst ein konkretes Problem, sonst nichts.</li>
+      <li class="ls-item"><b>Datensparsam</b> – ohne Cloud, Tracking oder Konto.</li>
+      <li class="ls-item"><b>Lokal</b> – deine Daten bleiben bei dir.</li>
+      <li class="ls-item"><b>Fair</b> – werbefrei; das Grundlegende bleibt immer frei.</li>
+      <li class="ls-item"><b>Transparent</b> – du behältst die Kontrolle, Daten jederzeit löschbar.</li>
+      <li class="ls-item"><b>Verständlich</b> – klare Sprache statt Fachchinesisch.</li>
+    </ul>
+  </section>
 
   <h2 class="apps-h">Apps &amp; Programme, die es dir leichter machen</h2>
   <p class="apps-sub">Mehrere kleine Helfer fürs Handy und für den PC – und es kommt laufend mehr dazu.</p>
