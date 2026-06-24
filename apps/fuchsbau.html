@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FehlerFuchs FuchsBau – Passwortmanager, 100 % lokal</title>
+<meta name="description" content="FehlerFuchs FuchsBau: Passwort-Generator mit einfachem Tresor. Menschlich merkbare Passwörter, biometrischer Schutz, verschlüsselt – 100 % lokal, ohne Cloud.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css">
+</head>
+<body style="--accent:#4F46E5">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="bauFur" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E07B0A"/><stop offset="1" stop-color="#C2410C"/></linearGradient>
+  <linearGradient id="bauGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE08A"/><stop offset="0.5" stop-color="#E3B345"/><stop offset="1" stop-color="#B07D1A"/></linearGradient>
+  <g id="fox-bau">
+    <path d="M96,96 L186,150 L256,185 L326,150 L416,96 L396,250 L256,440 L116,250 Z" fill="url(#bauFur)"/>
+    <path d="M132,120 L186,150 L158,182 Z" fill="#7C3F16"/><path d="M380,120 L326,150 L354,182 Z" fill="#7C3F16"/>
+    <path d="M198,250 L314,250 L256,430 Z" fill="#FFF7ED"/>
+    <ellipse cx="208" cy="236" rx="17" ry="10" fill="#2B160B" transform="rotate(-18 208 236)"/>
+    <circle cx="306" cy="236" r="30" fill="#7C3F16"/><circle cx="306" cy="236" r="22" fill="#0E2540"/>
+    <circle cx="306" cy="236" r="13" fill="#2563EB"/><circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
+    <circle cx="299" cy="228" r="4" fill="#F0F9FF" opacity="0.95"/>
+    <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+    <g stroke="#6B4310" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="86" cy="414" r="10" fill="url(#bauGold)"/><circle cx="100" cy="388" r="8" fill="url(#bauGold)"/><circle cx="100" cy="440" r="8" fill="url(#bauGold)"/>
+      <path fill="url(#bauGold)" fill-rule="evenodd" d="M92,414 a42,42 0 1,0 84,0 a42,42 0 1,0 -84,0 Z M116,414 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0 Z"/>
+      <circle cx="180" cy="414" r="11" fill="url(#bauGold)"/><rect x="176" y="406" width="186" height="16" rx="6" fill="url(#bauGold)"/>
+      <path fill="url(#bauGold)" d="M350,406 L392,406 L392,452 L380,452 L380,432 L370,432 L370,452 L360,452 L360,440 L350,440 Z"/>
+    </g>
+    <rect x="182" y="408" width="172" height="4" rx="2" fill="#FFF3C4" opacity="0.85"/>
+  </g>
+  <g id="badge"><circle cx="120" cy="120" r="116" fill="#FFF7ED" stroke="#F0E0CE" stroke-width="3"/>
+    <g transform="translate(120,122) scale(0.42) translate(-256,-268)"><use href="#fox-bau"/></g></g>
+</defs></svg>
+
+<nav>
+  <a class="back" href="../index.html">← Zur Übersicht</a><span class="sp"></span>
+  <a href="../index.html">Start</a><a href="../downloads.html">Downloads</a><a href="../datenschutz.html">Datenschutz</a><a href="../impressum.html">Impressum</a>
+</nav>
+
+<header class="hero">
+  <svg class="mk" viewBox="0 0 240 240" role="img" aria-label="FehlerFuchs FuchsBau"><use href="#badge"/></svg>
+  <div>
+    <h1>FehlerFuchs Fuchs<span class="ac">Bau</span></h1>
+    <p class="tag">Passwort-Generator mit einfachem Tresor: menschlich merkbare Passwörter erzeugen und sicher verwahren – 100 % lokal, ohne Konto, ohne Cloud.</p>
+    <div class="badges"><span class="badge soon">In Entwicklung · Android</span><span class="badge">100 % lokal</span></div>
+    <div class="cta-row"><a class="cta ghost" href="mailto:info@fehlerfuchs.eu?subject=FuchsBau">Interesse melden</a></div>
+  </div>
+</header>
+
+<section>
+  <h2 class="sec">Worum es geht</h2>
+  <p class="lead">Gute Passwörter sind schwer zu merken, schlechte zu unsicher. FuchsBau erzeugt <strong>menschlich merkbare</strong> Passwörter – von „leicht zu merken" (Wort-Passphrase, aussprechbare Silben) bis „maximal sicher" – mit Stärke-Anzeige, und bewahrt sie auf Wunsch im geschützten Tresor auf.</p>
+</section>
+
+<section>
+  <h2 class="sec">Funktionen</h2>
+  <div class="grid">
+    <div class="card"><h3>Passwort-Generator</h3><p>Stile: Wort-Passphrase, aussprechbare Silben, Muster – mit Stärke-Anzeige.</p></div>
+    <div class="card"><h3>Einfacher Tresor</h3><p>Generierte und eigene Einträge mit Titel/Notiz.</p></div>
+    <div class="card"><h3>App-Schutz</h3><p>Biometrie (Fingerabdruck/Gesicht) + PIN, mit automatischer Sperre.</p></div>
+    <div class="card"><h3>Verschlüsselt</h3><p>Verschlüsselte Ablage; kopierte Passwörter werden aus der Zwischenablage automatisch gelöscht.</p></div>
+    <div class="card"><h3>Bildschirm-Schutz</h3><p>Schutz vor Screenshots und „letzte Apps"-Vorschau im Tresor.</p></div>
+    <div class="card"><h3>„Ohne Bezug"</h3><p>Pro Eintrag nur Titel/Notiz, Passwort, Datum – bewusst kein Dienst, keine URL, kein Benutzername.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">Clever gedacht: „ohne Bezug"</h2>
+  <p>Weil pro Eintrag <strong>kein Dienst, keine URL und kein Benutzername</strong> gespeichert wird, ließe sich selbst im unwahrscheinlichen Fall eines Lecks ein Passwort keinem Konto zuordnen. Sicherheit durch Weglassen.</p>
+</section>
+
+<section>
+  <h2 class="sec">Datenschutz zuerst</h2>
+  <p><span class="pill">Keine Cloud</span><span class="pill">Kein Tracking</span><span class="pill">Keine Telemetrie</span><span class="pill">Keine Werbung</span><span class="pill">Kein Konto</span><span class="pill">Nur lokal</span></p>
+  <p><strong>Was es nicht ist:</strong> kein Cloud-Passwort-Manager, keine Synchronisierung, kein Browser-Autofill, kein Team-Tresor und keine Online-„kompromittiert"-Prüfung. Bewusst schlank und offline.</p>
+</section>
+
+<section>
+  <h2 class="sec">Häufige Fragen</h2>
+  <div class="faq">
+    <details><summary>Synchronisiert FuchsBau in die Cloud?</summary><div class="a">Nein. FuchsBau ist bewusst lokal – keine Cloud, kein Konto, keine Sync.</div></details>
+    <details><summary>Warum kein Benutzername/Dienst pro Eintrag?</summary><div class="a">Damit ein einzelnes Passwort niemandem zuzuordnen ist – maximale Sicherheit durch Weglassen.</div></details>
+    <details><summary>Für welche Plattform?</summary><div class="a">Android zuerst; eine Windows-Version ist im Anschluss geplant.</div></details>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Auf dem Laufenden bleiben</h2>
+  <p>Interesse oder Feedback: <a href="mailto:info@fehlerfuchs.eu?subject=FuchsBau">info@fehlerfuchs.eu</a></p>
+  <div style="margin-top:12px"><a class="cta" href="../index.html">← Zur App-Übersicht</a></div>
+</div>
+
+<footer>© 2026 Matthias Schacht · FehlerFuchs und seine Apps. FuchsBau ist eine App von FehlerFuchs. Datensparsam, ohne Cloud. Bereitstellung „wie besehen", ohne Gewähr.</footer>
+</body>
+</html>

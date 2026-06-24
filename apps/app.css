@@ -1,0 +1,57 @@
+/* Gemeinsames Stylesheet für FehlerFuchs-Produktseiten (/apps/*). Akzent je Seite via --accent. */
+:root{--orange:#D97706;--brown:#7C3F16;--cream:#FFF7ED;--ink:#2B160B;--muted:#6b5b50;--app:#15803D;--action:#C2410C;--bg:#fbf7f2;--accent:#C2410C}
+@font-face{font-family:'Poppins';src:url('../fonts/Poppins-Regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'Poppins';src:url('../fonts/Poppins-Medium.woff') format('woff');font-weight:500;font-display:swap}
+@font-face{font-family:'Poppins';src:url('../fonts/Poppins-Bold.woff') format('woff');font-weight:700;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 20px 48px;max-width:920px;margin:0 auto}
+h1,h2,h3{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+a{color:var(--action);text-decoration:none}a:hover{text-decoration:underline}
+.wm{font-family:'Poppins';font-weight:700;fill:var(--brown);letter-spacing:-.5px}
+nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:0 0 20px;font-size:.92rem}
+nav .back{font-weight:600;color:var(--brown)}nav .sp{flex:1}
+.hero{background:var(--cream);border:1px solid #f0e0cf;border-radius:20px;padding:26px 28px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.hero .mk{width:104px;height:104px;flex:none}
+.hero h1{font-size:2rem;color:var(--brown);line-height:1.1;letter-spacing:-.5px}
+.hero h1 .ac{color:var(--accent)}
+.hero .tag{color:var(--muted);font-size:1.05rem;margin-top:6px;max-width:560px}
+.hero .badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;background:#e7f3df;color:#2f6d12;border:1px solid #cde7b6;border-radius:20px;padding:3px 10px}
+.badge.soon{background:#f1ece4;color:#7a6650;border-color:#e3d6c6}
+.hero .cta-row{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.cta{display:inline-block;background:var(--orange);color:#fff;font-weight:600;padding:11px 18px;border-radius:12px;font-size:.92rem}
+.cta:hover{background:#b45309;text-decoration:none}
+.cta.ghost{background:#fff;color:var(--action);border:1px solid #f0d6c4}
+.cta.soon{background:#e7d6c4;color:#7a6650;cursor:default}
+.cta.free{background:#15803D}.cta.free:hover{background:#11652f}
+.cta.pro{background:#B91C1C}.cta.pro:hover{background:#991616}
+section{margin-top:34px}
+h2.sec{font-size:1.4rem;color:var(--brown);margin-bottom:10px}
+.lead{font-size:1.05rem}
+p{margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:6px}
+.card{background:#fff;border:1px solid #ecdfd2;border-radius:14px;padding:15px 17px}
+.card h3{font-size:1.02rem;color:var(--brown);margin-bottom:5px}
+.card p{font-size:.92rem;color:var(--ink);margin:0}
+ol.steps{list-style:none;counter-reset:s;margin:6px 0 0}
+ol.steps li{position:relative;padding:0 0 0 40px;margin:12px 0;font-size:.96rem}
+ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:.95rem}
+ol.steps strong{color:var(--brown)}
+.tablewrap{overflow-x:auto;margin-top:8px;border:1px solid #ecdfd2;border-radius:14px}
+table.ed{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:.88rem}
+table.ed th,table.ed td{padding:10px 12px;text-align:left;border-bottom:1px solid #f0e6da;vertical-align:top}
+table.ed thead th{background:var(--cream);font-family:'Poppins';font-size:.9rem}
+table.ed td:first-child,table.ed th:first-child{font-weight:600;color:var(--brown);background:#fdfaf6}
+.yes{color:#15803D;font-weight:700}.no{color:#b9a892}
+.faq details{background:#fff;border:1px solid #ecdfd2;border-radius:12px;margin:8px 0;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:13px 16px;font-family:'Poppins';font-weight:600;color:var(--brown);font-size:.98rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{background:#fcf8f3}
+.faq .a{padding:0 16px 14px;font-size:.94rem}
+.pill{display:inline-block;background:var(--cream);color:var(--brown);border:1px solid #f0e0cf;border-radius:20px;padding:3px 11px;font-size:.82rem;margin:3px 5px 3px 0}
+.cta-band{background:var(--cream);border:1px solid #f0e0cf;border-radius:16px;padding:20px 24px;margin-top:34px;text-align:center}
+.cta-band h2{font-size:1.25rem;color:var(--brown);margin-bottom:6px}
+footer{margin-top:34px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:16px}
