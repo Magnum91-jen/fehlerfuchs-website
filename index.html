@@ -85,6 +85,24 @@
   .cta{display:inline-block;background:var(--orange);color:#fff;font-weight:600;padding:11px 18px;border-radius:12px;margin-top:16px;font-size:.92rem}
   .cta:hover{background:#b45309;text-decoration:none}
   .cta.soon{background:#e7d6c4;color:#7a6650;cursor:default}
+  /* Versionen / Editionen (Unter-Akkordeon) */
+  .versions{margin-top:6px}
+  .versions .vh{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1rem;color:var(--brown);margin:18px 0 8px}
+  .ver-acc{border:1px solid #ecdfd2;border-radius:12px;background:#fcf8f3;margin:8px 0;overflow:hidden}
+  .ver-acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px}
+  .ver-acc>summary::-webkit-details-marker{display:none}
+  .ver-acc>summary:hover{background:#f7efe6}
+  .ver-acc[open]>summary{background:#f7efe6}
+  .ver-acc .vname{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;color:var(--brown);font-size:.98rem}
+  .ver-acc .vname .free{color:#15803D}
+  .ver-acc .vname .pro{color:#B91C1C}
+  .ver-acc .vname .cust{color:#C2410C}
+  .ver-acc .vname .wl{color:#2563EB}
+  .ver-acc .vbadge{font-size:.66rem;font-weight:700;border-radius:20px;padding:2px 9px;background:#e7f3df;color:#2f6d12;border:1px solid #cde7b6;white-space:nowrap}
+  .ver-acc .vbadge.soon{background:#eef2ff;color:#3730a3;border-color:#c7d2fe}
+  .ver-acc .vbody{padding:2px 14px 14px;font-size:.92rem;line-height:1.6}
+  .ver-acc .vbody ul{margin:6px 0 2px 18px}
+  .ver-acc .vbody li{margin:3px 0}
   .biz{margin-top:18px;background:var(--cream);border:1px solid #f0e0cf;border-radius:12px;padding:13px 15px;font-size:.88rem;line-height:1.55}
   .biz .tag-biz{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#2f6d12;background:#e7f3df;border:1px solid #cde7b6;border-radius:20px;padding:2px 9px;margin-right:6px}
 
@@ -330,12 +348,12 @@
 
   <div class="apps2">
 
-    <!-- App 1: FehlerFuchsMR (aufklappbar) -->
+    <!-- FehlerFuchs MobileReport – Dach-App mit Editionen (Free/Pro/Custom/White-Label) -->
     <details class="app-acc">
       <summary>
-        <svg class="lockup" viewBox="0 0 650 150" role="img" aria-label="FehlerFuchsMR">
-          <use href="#fox-free" transform="translate(8,-14) scale(0.34)"/>
-          <text class="wm" x="150" y="92" font-size="62">FehlerFuchs<tspan class="mr">MR</tspan></text>
+        <svg class="lockup" viewBox="0 0 1000 150" role="img" aria-label="FehlerFuchs MobileReport">
+          <use href="#fox" transform="translate(8,-14) scale(0.34)"/>
+          <text class="wm" x="150" y="92" font-size="62">FehlerFuchs <tspan fill="#15803D">MobileReport</tspan></text>
         </svg>
         <span class="sumright">
           <span class="badge">Privat-Beta · Android</span>
@@ -348,10 +366,10 @@
       </summary>
 
       <div class="app-body">
-        <h3 class="first">Was ist FehlerFuchs<span style="color:var(--app);font-weight:900">MR</span>?</h3>
-        <p>Ein kleines, lokales Melde-Logbuch für Geräte („Mobile Report"). Erfasse schnell einen Defekt, eine Auffälligkeit oder eine Rückfrage, füge Fotos hinzu, erstelle ein PDF und bereite es als E-Mail vor – alles bleibt auf deinem Gerät.</p>
+        <h3 class="first">Was ist FehlerFuchs <span style="color:var(--app);font-weight:900">MobileReport</span>?</h3>
+        <p>Ein kleines, lokales Melde-Logbuch für Geräte. Erfasse schnell einen Defekt, eine Auffälligkeit oder eine Rückfrage, füge Fotos hinzu, erstelle ein PDF und bereite es als E-Mail vor – alles bleibt auf deinem Gerät. Mobile Report war die erste FehlerFuchs-App; auf dieser Grundlage gibt es mehrere <strong>Editionen</strong> – von kostenlos-privat bis maßgeschneidert für Firmen.</p>
 
-        <h3>Funktionen</h3>
+        <h3>Funktionen (in allen Editionen)</h3>
         <ul>
           <li>Meldung erfassen: Gerät, Bereich, Kategorie, Priorität, Beschreibung</li>
           <li>Fotos per Kamera oder Galerie (EXIF-/Standortdaten werden vorher entfernt)</li>
@@ -362,7 +380,7 @@
           <li>Alle Daten jederzeit lokal löschbar</li>
         </ul>
 
-        <h3>Kurzanleitung</h3>
+        <h3>So funktioniert's</h3>
         <ol class="howto">
           <li><strong>Meldung erfassen:</strong> Gerät, Bereich, Kategorie, Priorität und Beschreibung eintragen.</li>
           <li><strong>Foto hinzufügen (optional):</strong> per Kamera oder Galerie – keine personenbezogenen oder sensiblen Inhalte.</li>
@@ -385,38 +403,42 @@
         <h3>Was es nicht ist</h3>
         <p>Kein rechtssicheres Nachweissystem, kein zentrales Ticketsystem, keine Cloud-App, keine Bewertungs-, Freigabe- oder Diagnosesoftware. Bitte keine personenbezogenen oder sensiblen Inhalte erfassen oder fotografieren.</p>
 
-        <!--
-          Play-Store-Button: sobald die App im Play Store ist, hier class="cta" (statt "cta soon"),
-          href auf die Store-URL setzen, Text "▶ Get it on Google Play".
-          Store-URL-Schema: https://play.google.com/store/apps/details?id=de.fehlerfuchs.mobilereport
-        -->
-        <p style="margin-top:8px"><strong>Status:</strong> aktuell geschlossene Privat-Beta – noch nichts öffentlich verfügbar. Der öffentliche Start kommt mit dem Play-Store-Release (gemeinsam mit FehlerFuchs Kleingewerbe).</p>
-        <div><a class="cta soon">▶ Bald im Google Play Store</a></div>
-      </div>
-    </details>
+        <div class="versions">
+          <div class="vh">Editionen im Überblick</div>
 
-    <!-- FehlerFuchsMR-Pro – kurz vor Beta -->
-    <details class="app-acc">
-      <summary>
-        <svg class="lockup" viewBox="0 0 815 150" role="img" aria-label="FehlerFuchsMR-Pro">
-          <use href="#fox-pro" transform="translate(8,-14) scale(0.34)"/>
-          <text class="wm" x="150" y="92" font-size="62">FehlerFuchs<tspan fill="#B91C1C" font-weight="900">MR</tspan><tspan>-Pro</tspan></text>
-        </svg>
-        <span class="sumright">
-          <span class="badge">Beta in Kürze · Android</span>
-          <span class="more">
-            <span class="lbl-closed">Mehr erfahren</span>
-            <span class="lbl-open">Weniger anzeigen</span>
-            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </span>
-        </span>
-      </summary>
+          <details class="ver-acc">
+            <summary><span class="vname">MobileReport <span class="free">Free</span></span><span class="vbadge">Privat-Beta · Android · kostenlos</span></summary>
+            <div class="vbody">
+              <p>Die <strong>kostenlose Grundversion</strong> mit allem, was man zum Melden braucht – der volle Funktionsumfang von oben, 100 % lokal und werbefrei. Ideal für Privatpersonen und alle, die einfach schnell etwas festhalten und als PDF weitergeben wollen.</p>
+              <p style="margin-top:6px"><strong>Status:</strong> geschlossene Privat-Beta; der öffentliche Start kommt mit dem Play-Store-Release.</p>
+            </div>
+          </details>
 
-      <div class="app-body">
-        <p>So stelle ich mir das vor: eine <strong>FehlerFuchsMR-Pro</strong>-Version, die so <strong>intuitiv</strong> bleibt wie die freie App, sich aber gezielt auf die Bedürfnisse von Firmen und Teams einstellen lässt. Mit umfangreicheren Einstellungen: fest vorgegebene Bereiche, Kategorien und Pflichtfelder, mehr Filter und Suche im Logbuch, eigene Vorlagen und Firmen-Branding, synchronisiertes Logging von Meldungen und Logbuch (z. B. geräteübergreifend im Team) – und auf Wunsch eine optionale Anbindung an firmeneigene Systeme oder Server (z. B. zur geordneten Übergabe der Meldungen), vollständig unter der Kontrolle der jeweiligen Firma.</p>
-        <p>Die Grundidee bleibt: erst einfach und schnell – der erweiterte Komfort liegt darunter, nicht davor.</p>
-        <p style="margin-top:8px"><strong>Status:</strong> steht <strong>kurz vor der Beta</strong> (Android). Wenn du als Firma/Team früh testen möchtest, schreib mir: <a href="mailto:info@fehlerfuchs.eu?subject=FehlerFuchsMR%20Pro%20Beta">info@fehlerfuchs.eu</a>.</p>
-        <div><a class="cta soon">▶ Beta in Kürze</a></div>
+          <details class="ver-acc">
+            <summary><span class="vname">MobileReport <span class="pro">Pro</span></span><span class="vbadge">Beta in Kürze · Android</span></summary>
+            <div class="vbody">
+              <p>Für <strong>Firmen und Teams</strong> – so intuitiv wie die freie App, aber gezielt einstellbar: fest vorgegebene Bereiche, Kategorien und <strong>Pflichtfelder</strong>, mehr Filter und Suche im Logbuch, eigene Vorlagen und Firmen-Branding, geräteübergreifend <strong>synchronisiertes Logbuch</strong> und – auf Wunsch – eine optionale Anbindung an firmeneigene Systeme/Server (zur geordneten Übergabe der Meldungen), vollständig unter Kontrolle der Firma.</p>
+              <p style="margin-top:6px"><strong>Status:</strong> steht kurz vor der Beta. Früh testen? <a href="mailto:info@fehlerfuchs.eu?subject=MobileReport%20Pro%20Beta">info@fehlerfuchs.eu</a></p>
+            </div>
+          </details>
+
+          <details class="ver-acc">
+            <summary><span class="vname">MobileReport <span class="cust">Custom</span></span><span class="vbadge soon">auf Anfrage</span></summary>
+            <div class="vbody">
+              <p><strong>Maßgeschneidert auf eure Abläufe:</strong> eigene Felder und Kategorien, angepasste Workflows und PDF-Vorlagen und – wenn gewünscht – Schnittstellen zu euren Systemen. Ihr beschreibt, wie ihr arbeitet; die App wird darauf zugeschnitten. Aufbauend auf Pro.</p>
+              <p style="margin-top:6px">Interesse? <a href="mailto:info@fehlerfuchs.eu?subject=MobileReport%20Custom">info@fehlerfuchs.eu</a></p>
+            </div>
+          </details>
+
+          <details class="ver-acc">
+            <summary><span class="vname">MobileReport <span class="wl">White-Label</span></span><span class="vbadge soon">auf Anfrage</span></summary>
+            <div class="vbody">
+              <p><strong>Dieselbe App unter eurer eigenen Marke:</strong> euer Name, Logo und eure Farben – auf dem Gerät und (auf Wunsch) im Store. Gleiche bewährte Technik, eure Identität. Ideal, wenn das Melde-Logbuch als euer eigenes Produkt auftreten soll.</p>
+              <p style="margin-top:6px">Interesse? <a href="mailto:info@fehlerfuchs.eu?subject=MobileReport%20White-Label">info@fehlerfuchs.eu</a></p>
+            </div>
+          </details>
+
+        </div>
       </div>
     </details>
 
