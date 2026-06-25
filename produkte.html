@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produktseiten-Übersicht – FehlerFuchs</title>
+<meta name="description" content="Übersicht aller FehlerFuchs-Produktseiten: MobileReport, Kleingewerbe, CheckIn Vita, AppInsight, FuchsBau, CleanDesk.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root{--orange:#D97706;--brown:#7C3F16;--cream:#FFF7ED;--ink:#2B160B;--muted:#6b5b50;--action:#C2410C;--bg:#fbf7f2}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Regular.woff') format('woff');font-weight:400;font-display:swap}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Bold.woff') format('woff');font-weight:700;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 20px 48px;max-width:760px;margin:0 auto}
+  h1{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  a{color:var(--action);text-decoration:none}a:hover{text-decoration:underline}
+  header.site{display:flex;align-items:center;gap:14px;margin-bottom:4px}
+  header.site h1{font-size:1.5rem;color:var(--brown)}
+  nav{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0 22px;font-size:.92rem}
+  .intro{color:var(--muted);margin-bottom:14px}
+  ul.prod{list-style:none}
+  ul.prod li{border-bottom:1px solid #ecdfd2}
+  ul.prod li a.row{display:flex;align-items:baseline;gap:10px;padding:13px 6px;color:var(--ink)}
+  ul.prod li a.row:hover{background:#fcf8f3;text-decoration:none}
+  ul.prod .nm{font-family:'Poppins';font-weight:700;font-size:1.05rem;color:var(--brown)}
+  ul.prod .kg{color:#C2410C}.rd{color:#B91C1C}.vi{color:#5B8A72}.bl{color:#2563EB}.in{color:#4F46E5}.pt{color:#0E7490}
+  ul.prod .desc{font-size:.9rem;color:var(--muted)}
+  ul.prod .arrow{margin-left:auto;color:var(--action);font-weight:600}
+  footer{margin-top:30px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:16px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="fox">
+    <path d="M96,96 L186,150 L256,185 L326,150 L416,96 L396,250 L256,440 L116,250 Z" fill="#D97706"/>
+    <path d="M132,120 L186,150 L158,182 Z" fill="#7C3F16"/><path d="M380,120 L326,150 L354,182 Z" fill="#7C3F16"/>
+    <path d="M198,250 L314,250 L256,430 Z" fill="#FFF7ED"/><path d="M192,228 L232,222 L214,250 Z" fill="#2B160B"/>
+    <circle cx="306" cy="236" r="30" fill="#7C3F16"/><circle cx="306" cy="236" r="22" fill="#0E2540"/>
+    <circle cx="306" cy="236" r="13" fill="#2563EB"/><circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
+    <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+  </g>
+  <g id="badge"><circle cx="120" cy="120" r="116" fill="#FFF7ED" stroke="#F0E0CE" stroke-width="3"/>
+    <g transform="translate(120,122) scale(0.42) translate(-256,-268)"><use href="#fox"/></g></g>
+</defs></svg>
+
+<header class="site">
+  <span><svg width="44" height="44" viewBox="0 0 240 240" role="img" aria-label="FehlerFuchs"><use href="#badge"/></svg></span>
+  <h1>Produktseiten-Übersicht</h1>
+</header>
+<nav>
+  <a href="index.html">Start</a><a href="downloads.html">Downloads</a><a href="produkte.html">Produktseiten</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a>
+</nav>
+
+<p class="intro">Alle FehlerFuchs-Apps und -Programme im Detail – je eine Seite pro Produkt.</p>
+
+<ul class="prod">
+  <li><a class="row" href="apps/mobilereport.html"><span class="nm">FehlerFuchs Mobile<span class="rd">Report</span></span><span class="desc">– lokales Melde-Logbuch</span><span class="arrow">→</span></a></li>
+  <li><a class="row" href="apps/kleingewerbe.html"><span class="nm">FehlerFuchs <span class="kg">Kleingewerbe</span></span><span class="desc">– Verwaltung für Windows</span><span class="arrow">→</span></a></li>
+  <li><a class="row" href="apps/checkin-vita.html"><span class="nm">FehlerFuchs CheckIn <span class="vi">Vita</span></span><span class="desc">– Gesundheits-Tagebuch</span><span class="arrow">→</span></a></li>
+  <li><a class="row" href="apps/appinsight.html"><span class="nm">FehlerFuchs App<span class="bl">Insight</span></span><span class="desc">– App-Transparenz</span><span class="arrow">→</span></a></li>
+  <li><a class="row" href="apps/fuchsbau.html"><span class="nm">FehlerFuchs Fuchs<span class="in">Bau</span></span><span class="desc">– Passwortmanager</span><span class="arrow">→</span></a></li>
+  <li><a class="row" href="apps/cleandesk.html"><span class="nm">FehlerFuchs Clean<span class="pt">Desk</span></span><span class="desc">– Ordnungshelfer für Windows</span><span class="arrow">→</span></a></li>
+</ul>
+
+<footer>© 2026 Matthias Schacht · FehlerFuchs und seine Apps. Datensparsam, ohne Cloud und ohne Tracking.</footer>
+
+</body>
+</html>
