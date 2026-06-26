@@ -53,6 +53,22 @@
   .apps-sub{color:var(--muted);font-size:.92rem;margin:0 0 18px}
   .apps2{display:flex;flex-direction:column;gap:14px;margin-bottom:38px}
 
+  /* APP-LOCKUP-KARTEN (Uebersicht oben) */
+  .app-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:0 0 34px}
+  .app-card{background:#fff;border:1px solid #ecdfd2;border-radius:16px;padding:16px 17px;display:flex;flex-direction:column;gap:11px;box-shadow:0 6px 16px rgba(124,63,22,.05)}
+  .app-card .lk{display:flex;align-items:center;gap:13px}
+  .app-card .lk svg{width:54px;height:54px;flex:none}
+  .app-card .cw{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:1.3rem;line-height:1;letter-spacing:-.4px;color:var(--brown)}
+  .app-card .von{font-size:.72rem;color:var(--muted);margin-top:5px}
+  .app-card .ctag{font-size:.86rem;color:var(--muted);line-height:1.45}
+  .app-card .cfoot{display:flex;align-items:center;gap:10px;margin-top:auto;flex-wrap:wrap}
+  .app-card .cbadge{font-size:.7rem;color:#3f6b50;background:#ECEFE6;border:1px solid #CADCBE;border-radius:20px;padding:4px 10px;white-space:nowrap}
+  .app-card .cgo{margin-left:auto;font-size:.8rem;font-weight:700;color:#fff;padding:8px 13px;border-radius:11px}
+  .app-card .cgo:hover{text-decoration:none;filter:brightness(1.07)}
+  .detail-h{font-size:1.12rem;color:var(--brown);margin:6px 0 4px}
+  .detail-sub{color:var(--muted);font-size:.9rem;margin:0 0 16px}
+  @media(max-width:560px){.app-cards{grid-template-columns:1fr}}
+
   .app-acc{background:#fff;border:1px solid #ecdfd2;border-radius:16px;box-shadow:0 6px 16px rgba(124,63,22,.05);overflow:hidden}
   .app-acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:14px 20px}
   .app-acc>summary::-webkit-details-marker{display:none}
@@ -352,6 +368,67 @@
   <h2 class="apps-h">Apps &amp; Programme, die es dir leichter machen</h2>
   <p class="apps-sub">Mehrere kleine Helfer fürs Handy und für den PC – und es kommt laufend mehr dazu.</p>
 
+  <div class="app-cards">
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="FehlerFuchs MR"><use href="#foxm"/></svg>
+        <div><div class="cw">FehlerFuchs<span style="color:#2E7D46"> MR</span></div><div class="von">von FehlerFuchs</div></div>
+      </div>
+      <p class="ctag">Mobile Report – schnelle Mängel-Doku unterwegs.</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#2E7D46" href="apps/mobilereport.html">Zur Produktseite</a></div>
+    </article>
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="FehlerFuchs Kleingewerbe"><use href="#fox"/></svg>
+        <div><div class="cw"><span style="color:#B45309">Kleingewerbe</span></div><div class="von">von FehlerFuchs</div></div>
+      </div>
+      <p class="ctag">Verwaltung fürs Kleingewerbe (Free &amp; Pro).</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#B45309" href="apps/kleingewerbe.html">Zur Produktseite</a></div>
+    </article>
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="FehlerFuchs CheckIn Vita"><use href="#fox-vita"/></svg>
+        <div><div class="cw">CheckIn <span style="color:#5B8A72">Vita</span></div><div class="von">von FehlerFuchs</div></div>
+      </div>
+      <p class="ctag">Persönliches Gesundheitstagebuch (kein Medizinprodukt).</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#5B8A72" href="apps/checkin-vita.html">Zur Produktseite</a></div>
+    </article>
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="FehlerFuchs AppInsight"><use href="#fox-insight"/></svg>
+        <div><div class="cw">App<span style="color:#2563EB">Insight</span></div><div class="von">von FehlerFuchs</div></div>
+      </div>
+      <p class="ctag">Verstehen, was Apps wirklich tun.</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#2563EB" href="apps/appinsight.html">Zur Produktseite</a></div>
+    </article>
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="FehlerFuchs FuchsBau"><use href="#fox-bau"/></svg>
+        <div><div class="cw">Fuchs<span style="color:#3B6B4E">Bau</span></div><div class="von">von FehlerFuchs</div></div>
+      </div>
+      <p class="ctag">Passwortmanager – merkbare Passwörter, lokaler Tresor.</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#3B6B4E" href="apps/fuchsbau.html">Zur Produktseite</a></div>
+    </article>
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="FehlerFuchs CleanDesk"><use href="#fox-clean"/></svg>
+        <div><div class="cw">Clean<span style="color:#0E7490">Desk</span></div><div class="von">von FehlerFuchs · neu</div></div>
+      </div>
+      <p class="ctag">Aufräumen mit Plan – nichts geht verloren.</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#0E7490" href="apps/cleandesk.html">Zur Produktseite</a></div>
+    </article>
+
+  </div>
+
+  <h3 class="detail-h">Alle Apps im Detail</h3>
+  <p class="detail-sub">Aufklappen für Funktionen, Datenschutz, Editionen und Downloads.</p>
+
   <div class="apps2">
 
     <!-- FehlerFuchs MobileReport – Dach-App mit Editionen (Free/Pro/Custom/White-Label) -->
@@ -604,7 +681,7 @@
       <summary>
         <svg class="lockup" viewBox="0 0 885 150" role="img" aria-label="FehlerFuchs FuchsBau">
           <use href="#fox-bau" transform="translate(8,-14) scale(0.34)"/>
-          <text class="wm" x="150" y="92" font-size="62">FehlerFuchs Fuchs<tspan fill="#4F46E5">Bau</tspan></text>
+          <text class="wm" x="150" y="92" font-size="62">FehlerFuchs Fuchs<tspan fill="#3B6B4E">Bau</tspan></text>
         </svg>
         <span class="sumright">
           <span class="badge">in Entwicklung · Android</span>
@@ -616,7 +693,7 @@
         </span>
       </summary>
       <div class="app-body">
-        <h3 class="first">Was ist Fuchs<span style="color:#4F46E5;font-weight:900">Bau</span>?</h3>        <p style="margin:2px 0 8px"><a class="cta" href="apps/fuchsbau.html" style="margin-top:0;padding:8px 15px;font-size:.88rem">Zur Produktseite →</a></p>
+        <h3 class="first">Was ist Fuchs<span style="color:#3B6B4E;font-weight:900">Bau</span>?</h3>        <p style="margin:2px 0 8px"><a class="cta" href="apps/fuchsbau.html" style="margin-top:0;padding:8px 15px;font-size:.88rem">Zur Produktseite →</a></p>
         <p>Ein lokaler <strong>Passwort-Generator mit einfachem Tresor</strong>. FuchsBau erzeugt <strong>menschlich merkbare</strong> Passwörter – von „leicht zu merken" (Wort-Passphrase, aussprechbare Silben) bis „maximal sicher" – mit Stärke-Anzeige, und bewahrt sie auf Wunsch im geschützten Tresor auf. <strong>100 % lokal</strong>, ohne Konto, ohne Cloud.</p>
 
         <h3>Funktionen</h3>
