@@ -28,6 +28,7 @@
   h1,h2,h3{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
   a{color:var(--action);text-decoration:none}
   a:hover{text-decoration:underline}
+  button{font:inherit}
   .brand{display:flex;justify-content:center;margin:4px 0 28px}
   .brand img{width:min(430px,88vw);height:auto;display:block;filter:drop-shadow(0 10px 22px rgba(124,63,22,.14))}
   .hero{text-align:center;max-width:790px;margin:0 auto 36px}
@@ -37,7 +38,7 @@
   .sub{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:clamp(1.05rem,2.8vw,1.45rem);font-weight:600;color:var(--orange);margin-bottom:16px}
   .lead{font-size:1.08rem;max-width:680px;margin:0 auto;color:var(--ink)}
   .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-  .cta{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#fff;font-weight:800;padding:12px 20px;border-radius:12px;font-size:.95rem}
+  .cta{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#fff;font-weight:800;padding:12px 20px;border-radius:12px;font-size:.95rem;border:0;cursor:pointer}
   .cta:hover{background:#b45309;text-decoration:none}
   .cta.ghost{background:#fff;color:var(--action);border:1px solid #f0d6c4}
   .cta.ghost:hover{background:#fcf8f3}
@@ -59,6 +60,21 @@
   .steps strong{display:block;color:var(--brown);font-family:'Poppins';line-height:1.25;margin-bottom:3px}
   .ask{background:var(--cream);border:1px solid #f0e0cf;border-radius:18px;padding:24px;text-align:center}
   .ask p{max-width:680px;margin:0 auto 10px}
+  .beta-callout{background:#fff;border:1px solid #ecdfd2;border-radius:18px;padding:24px;text-align:center;box-shadow:0 8px 22px rgba(124,63,22,.055)}
+  .beta-callout p{max-width:710px;margin:0 auto 10px}
+  .beta-dialog{border:0;border-radius:18px;padding:0;width:min(560px,calc(100vw - 32px));max-width:560px;box-shadow:0 24px 70px rgba(43,22,11,.34);background:#fff;color:var(--ink)}
+  .beta-dialog::backdrop{background:rgba(43,22,11,.48)}
+  .beta-form{padding:22px}
+  .dialog-head{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
+  .dialog-head h2{font-size:1.32rem;margin:0}
+  .dialog-close{background:var(--cream);border:1px solid #f0e0cf;border-radius:10px;color:var(--brown);font-weight:800;padding:7px 10px;cursor:pointer}
+  .fields{display:grid;gap:12px}
+  .fields label{display:grid;gap:5px;font-size:.9rem;font-weight:700;color:var(--brown);text-align:left}
+  .fields input,.fields select,.fields textarea{width:100%;border:1px solid #e4d3c1;border-radius:10px;background:#fffdf9;color:var(--ink);padding:10px 11px;font:inherit;font-weight:400}
+  .fields textarea{min-height:96px;resize:vertical}
+  .form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .form-actions .cta{margin-top:0}
+  .beta-status{min-height:1.4em;margin-top:10px;color:var(--muted);font-size:.9rem}
   .final{background:#2B160B;color:#fff;border-radius:18px;padding:26px 24px;text-align:center}
   .final h2{color:#FCE08A}
   .final p{max-width:690px;margin:0 auto;color:#fff7ed}
@@ -85,6 +101,7 @@
     <p class="lead">Unter FehlerFuchs entstehen kleine, praktische Software-Helfer für Alltag, Büro und Selbstständigkeit: lokal, datensparsam, ohne Cloud-Zwang und ohne Tracking.</p>
     <div class="ctas">
       <a class="cta" href="#kleingewerbe">Was entsteht da?</a>
+      <button class="cta ghost" type="button" data-open-beta>Ich will dein Programm testen</button>
       <a class="cta ghost" href="index.html">Zur echten Webseite</a>
     </div>
   </header>
@@ -108,6 +125,15 @@
       <p><span class="pill">Kunden</span><span class="pill">Termine</span><span class="pill">Angebote</span><span class="pill">Rechnungen</span><span class="pill">E-Mail</span><span class="pill">Berichte</span><span class="pill">Belege</span></p>
     </div>
     <img src="img/kleingewerbe-pro.png" alt="FehlerFuchs KleinGewerbe Pro" width="320" height="320" loading="lazy">
+  </section>
+
+  <section class="beta-callout" aria-labelledby="beta-title">
+    <h2 id="beta-title">Beta-Tester gesucht</h2>
+    <p>Ich suche Menschen, die FehlerFuchs KleinGewerbe im echten Alltag ausprobieren: ehrlich, neugierig und gern mit Rückmeldung, wo es noch hakt oder wo ein kleiner Bürohelfer richtig Zeit sparen würde.</p>
+    <p class="muted">Besonders spannend sind Selbstständige, Kleingewerbe, Nebenberufler und alle, die regelmäßig mit Kunden, Terminen, Angeboten, Rechnungen oder Belegen zu tun haben.</p>
+    <div class="ctas">
+      <button class="cta" type="button" data-open-beta>Ich will dein Programm testen</button>
+    </div>
   </section>
 
   <section aria-labelledby="ziel-title">
@@ -134,11 +160,116 @@
     <p>Dann geht es hier zur normalen FehlerFuchs-Webseite mit Produktseiten, Downloads und Kontaktmöglichkeiten.</p>
     <div class="ctas">
       <a class="cta" href="index.html">Und hier geht's zur echten Webseite</a>
+      <button class="cta ghost" type="button" data-open-beta>Beta-Test anfragen</button>
       <a class="cta ghost" href="mailto:info@fehlerfuchs.eu?subject=FehlerFuchs%20Empfehlung">Kontakt aufnehmen</a>
     </div>
   </section>
 </main>
 
+<dialog class="beta-dialog" id="beta-dialog" aria-labelledby="beta-dialog-title">
+  <form class="beta-form" id="beta-form">
+    <div class="dialog-head">
+      <div>
+        <h2 id="beta-dialog-title">Beta-Test kurz vormerken</h2>
+        <p class="muted">Ein paar Angaben reichen. Danach öffnet sich eine vorbereitete E-Mail an FehlerFuchs.</p>
+      </div>
+      <button class="dialog-close" type="button" data-close-beta>Schließen</button>
+    </div>
+    <div class="fields">
+      <label>Dein Name
+        <input name="name" autocomplete="name" placeholder="Wie darf ich dich ansprechen?">
+      </label>
+      <label>Rückmeldung per E-Mail oder Telefon
+        <input name="contact" autocomplete="email" placeholder="Damit ich dir antworten kann" required>
+      </label>
+      <label>Was passt am ehesten zu dir?
+        <select name="role">
+          <option>Selbstständig / Kleingewerbe</option>
+          <option>Nebenberuflich selbstständig</option>
+          <option>Büro / Verwaltung / Organisation</option>
+          <option>Ich kenne jemanden, für den das passen könnte</option>
+          <option>Einfach neugierig</option>
+        </select>
+      </label>
+      <label>Dein System
+        <input name="system" placeholder="z. B. Windows 10/11, PC oder Laptop">
+      </label>
+      <label>Was möchtest du testen oder was wäre für dich wichtig?
+        <textarea name="note" placeholder="Zum Beispiel: Rechnungen, Termine, E-Mail, Belege, Auswertungen, E-Rechnungen ..."></textarea>
+      </label>
+    </div>
+    <div class="form-actions">
+      <button class="cta" type="submit">Abfrage als E-Mail öffnen</button>
+      <button class="cta ghost" type="button" data-close-beta>Abbrechen</button>
+    </div>
+    <p class="beta-status" id="beta-status" aria-live="polite"></p>
+  </form>
+</dialog>
+
 <footer>© 2026 FehlerFuchs. Alle Rechte vorbehalten. Diese Seite ist nur für direkte Empfehlungen gedacht.</footer>
+<script>
+  (function(){
+    var dialog = document.getElementById("beta-dialog");
+    var form = document.getElementById("beta-form");
+    var status = document.getElementById("beta-status");
+    var openButtons = document.querySelectorAll("[data-open-beta]");
+    var closeButtons = document.querySelectorAll("[data-close-beta]");
+
+    function openDialog(){
+      status.textContent = "";
+      if (dialog.showModal) {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "open");
+      }
+    }
+
+    function closeDialog(){
+      if (dialog.close) {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+    }
+
+    openButtons.forEach(function(button){
+      button.addEventListener("click", openDialog);
+    });
+
+    closeButtons.forEach(function(button){
+      button.addEventListener("click", closeDialog);
+    });
+
+    dialog.addEventListener("click", function(event){
+      if (event.target === dialog) {
+        closeDialog();
+      }
+    });
+
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+      var data = new FormData(form);
+      var lines = [
+        "Hallo FehlerFuchs,",
+        "",
+        "ich möchte FehlerFuchs KleinGewerbe als Beta-Tester ausprobieren.",
+        "",
+        "Name: " + (data.get("name") || "-"),
+        "Kontakt: " + (data.get("contact") || "-"),
+        "Profil: " + (data.get("role") || "-"),
+        "System: " + (data.get("system") || "-"),
+        "",
+        "Wichtig / interessant für mich:",
+        data.get("note") || "-",
+        "",
+        "Viele Grüße"
+      ];
+      var subject = "Beta-Test FehlerFuchs KleinGewerbe";
+      var href = "mailto:support@fehlerfuchs.eu?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+      status.textContent = "Dein Mailprogramm sollte sich gleich öffnen.";
+      window.location.href = href;
+    });
+  }());
+</script>
 </body>
 </html>
