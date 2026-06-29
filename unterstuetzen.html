@@ -38,7 +38,7 @@
   .hero p{font-size:1.02rem;margin:0 0 12px;max-width:650px}
   .hero strong{color:var(--brown)}
   .hero-art{min-height:260px;border-left:1px solid #ead9c8;padding-left:24px;display:flex;align-items:center;justify-content:center}
-  .deskmark{width:min(250px,64vw);height:auto;filter:drop-shadow(0 12px 18px rgba(124,63,22,.16))}
+  .hero-motif{width:min(190px,48vw);height:auto;display:block;opacity:.86;filter:drop-shadow(0 12px 20px rgba(124,63,22,.12))}
   .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
   .cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;font-weight:700;padding:11px 18px;border-radius:12px;font-size:.94rem}
   .cta:hover{background:#b45309;text-decoration:none}
@@ -111,16 +111,6 @@
   </g>
   <g id="badge"><circle cx="120" cy="120" r="116" fill="#FFF7ED" stroke="#F0E0CE" stroke-width="3"/>
     <g transform="translate(120,122) scale(0.42) translate(-256,-268)"><use href="#fox"/></g></g>
-  <g id="desk">
-    <rect x="52" y="324" width="408" height="28" rx="10" fill="#7C3F16"/>
-    <rect x="78" y="348" width="24" height="86" rx="8" fill="#B45309"/>
-    <rect x="410" y="348" width="24" height="86" rx="8" fill="#B45309"/>
-    <rect x="132" y="276" width="128" height="42" rx="8" fill="#FFF7ED" stroke="#E8D5C1" stroke-width="5"/>
-    <path d="M312 312h76c20 0 36-16 36-36v-12h-112z" fill="#0E7490"/>
-    <path d="M356 230c0-38 28-68 66-68h20" fill="none" stroke="#7C3F16" stroke-width="12" stroke-linecap="round"/>
-    <circle cx="450" cy="162" r="21" fill="#FCE08A" stroke="#B45309" stroke-width="8"/>
-    <g transform="translate(256,232) scale(.5) translate(-256,-268)"><use href="#fox"/></g>
-  </g>
 </defs></svg>
 
 <header class="site">
@@ -145,7 +135,7 @@
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <svg class="deskmark" viewBox="0 0 512 480"><use href="#desk"/></svg>
+      <img class="hero-motif" src="img/fehlerfuchs-silhouette.svg" alt="" width="240" height="240" decoding="async">
     </div>
   </section>
 
