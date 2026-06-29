@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unterstütze FehlerFuchs</title>
+<meta name="description" content="Unterstütze FehlerFuchs freiwillig: Entwicklung, Tests, Infrastruktur und die Kaffeekasse für kleine, faire und bezahlbare digitale Helfer.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Unterstütze FehlerFuchs">
+<meta property="og:description" content="Damit aus kleinen Ideen echte Helfer werden. Freiwillige Unterstützung für Entwicklung, Tests und Infrastruktur.">
+<meta property="og:image" content="https://fehlerfuchs.eu/og-image.png">
+<meta property="og:url" content="https://fehlerfuchs.eu/unterstuetzen.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fehlerfuchs.eu/og-image.png">
+<script src="https://www.paypal.com/sdk/js?client-id=PAYPAL_CLIENT_ID_ERGAENZEN&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+<style>
+  :root{--orange:#D97706;--brown:#7C3F16;--cream:#FFF7ED;--ink:#2B160B;--muted:#6b5b50;--action:#C2410C;--bg:#fbf7f2;--green:#3B6B4E;--blue:#2563EB;--petrol:#0E7490}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Regular.woff') format('woff');font-weight:400;font-display:swap}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Medium.woff') format('woff');font-weight:500;font-display:swap}
+  @font-face{font-family:'Poppins';src:url('fonts/Poppins-Bold.woff') format('woff');font-weight:700;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 20px 48px;max-width:960px;margin:0 auto}
+  h1,h2,h3{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  a{color:var(--action);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header.site{display:flex;align-items:center;gap:14px;margin-bottom:4px}
+  header.site h1{font-size:1.5rem;color:var(--brown)}
+  nav{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0 26px;font-size:.92rem}
+
+  .hero{background:linear-gradient(135deg,#fff 0%,var(--cream) 100%);border:1px solid #ecdfd2;border-radius:20px;padding:32px 34px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);gap:26px;align-items:center;box-shadow:0 8px 22px rgba(124,63,22,.06)}
+  .hero h2{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;color:var(--brown);letter-spacing:0;margin-bottom:10px}
+  .hero .sub{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:600;font-size:1.25rem;color:var(--orange);margin-bottom:16px}
+  .hero p{font-size:1.02rem;margin:0 0 12px;max-width:650px}
+  .hero strong{color:var(--brown)}
+  .hero-art{min-height:260px;border-left:1px solid #ead9c8;padding-left:24px;display:flex;align-items:center;justify-content:center}
+  .deskmark{width:min(250px,64vw);height:auto;filter:drop-shadow(0 12px 18px rgba(124,63,22,.16))}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;font-weight:700;padding:11px 18px;border-radius:12px;font-size:.94rem}
+  .cta:hover{background:#b45309;text-decoration:none}
+  .cta.ghost{background:#fff;color:var(--action);border:1px solid #f0d6c4}
+  .cta.ghost:hover{background:#fcf8f3}
+
+  section{margin-top:40px}
+  .sec-head{max-width:720px;margin-bottom:14px}
+  h2.sec{font-size:1.45rem;color:var(--brown);line-height:1.2;margin-bottom:7px}
+  .muted{color:var(--muted)}
+  .lead{font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .tile{background:#fff;border:1px solid #ecdfd2;border-radius:14px;padding:17px 18px;box-shadow:0 6px 16px rgba(124,63,22,.045)}
+  .tile .ico{width:34px;height:34px;border-radius:10px;background:var(--cream);border:1px solid #f0e0cf;color:var(--action);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:.78rem;margin-bottom:10px}
+  .tile h3{font-size:1.02rem;color:var(--brown);margin-bottom:5px}
+  .tile p{font-size:.94rem;margin:0}
+  .goal-band{background:#fff;border:1px solid #ecdfd2;border-radius:16px;padding:20px 22px}
+  .goal-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 18px;list-style:none;margin-top:14px}
+  .goal-list li{position:relative;padding-left:24px;color:var(--muted)}
+  .goal-list li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:3px;background:var(--green)}
+  .personal{display:grid;grid-template-columns:82px minmax(0,1fr);gap:18px;align-items:start;background:var(--cream);border:1px solid #f0e0cf;border-radius:16px;padding:20px 22px}
+  .personal img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:4px solid #fff;box-shadow:0 3px 12px rgba(43,22,11,.18)}
+  .personal p{margin-bottom:9px}
+  .support-band{background:#fff;border:1px solid #ecdfd2;border-radius:18px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,.8fr);gap:22px;align-items:start;box-shadow:0 8px 22px rgba(124,63,22,.055)}
+  .support-band h2{font-size:1.35rem;color:var(--brown);margin-bottom:8px}
+  .paypal-slot{border:1px solid #f0d6c4;background:#fffaf5;border-radius:14px;padding:18px;min-height:160px;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;text-align:center}
+  .paypal-sdk-note{color:var(--brown);font-weight:700}
+  .paypal-sdk-note span{display:block;color:var(--muted);font-weight:400;font-size:.88rem;margin-top:6px}
+  .legal-note{background:#fcf8f3;border:1px solid #ecdfd2;border-radius:12px;padding:13px 15px;color:var(--muted);font-size:.9rem;margin-top:16px}
+  .help-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:12px}
+  .help-list li{background:#fff;border:1px solid #ecdfd2;border-radius:12px;padding:11px 13px;font-weight:600;color:var(--brown)}
+  .transparency{background:#2B160B;color:#fff;border-radius:16px;padding:20px 22px}
+  .transparency h2{font-size:1.22rem;margin-bottom:6px;color:#FCE08A}
+  .transparency p{color:#fff7ed;margin:0}
+  footer{margin-top:34px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:16px}
+
+  @media(max-width:760px){
+    body{padding:20px 16px 40px}
+    .hero{grid-template-columns:1fr;padding:26px 22px}
+    .hero-art{border-left:0;border-top:1px solid #ead9c8;padding:22px 0 0;min-height:auto}
+    .support-band,.personal{grid-template-columns:1fr}
+    .personal img{width:72px;height:72px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="fox">
+    <path d="M96,96 L186,150 L256,185 L326,150 L416,96 L396,250 L256,440 L116,250 Z" fill="#D97706"/>
+    <path d="M132,120 L186,150 L158,182 Z" fill="#7C3F16"/><path d="M380,120 L326,150 L354,182 Z" fill="#7C3F16"/>
+    <path d="M198,250 L314,250 L256,430 Z" fill="#FFF7ED"/><path d="M192,228 L232,222 L214,250 Z" fill="#2B160B"/>
+    <circle cx="306" cy="236" r="30" fill="#7C3F16"/><circle cx="306" cy="236" r="22" fill="#0E2540"/>
+    <circle cx="306" cy="236" r="13" fill="#2563EB"/><circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
+    <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+  </g>
+  <g id="badge"><circle cx="120" cy="120" r="116" fill="#FFF7ED" stroke="#F0E0CE" stroke-width="3"/>
+    <g transform="translate(120,122) scale(0.42) translate(-256,-268)"><use href="#fox"/></g></g>
+  <g id="desk">
+    <rect x="52" y="324" width="408" height="28" rx="10" fill="#7C3F16"/>
+    <rect x="78" y="348" width="24" height="86" rx="8" fill="#B45309"/>
+    <rect x="410" y="348" width="24" height="86" rx="8" fill="#B45309"/>
+    <rect x="132" y="276" width="128" height="42" rx="8" fill="#FFF7ED" stroke="#E8D5C1" stroke-width="5"/>
+    <path d="M312 312h76c20 0 36-16 36-36v-12h-112z" fill="#0E7490"/>
+    <path d="M356 230c0-38 28-68 66-68h20" fill="none" stroke="#7C3F16" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="450" cy="162" r="21" fill="#FCE08A" stroke="#B45309" stroke-width="8"/>
+    <g transform="translate(256,232) scale(.5) translate(-256,-268)"><use href="#fox"/></g>
+  </g>
+</defs></svg>
+
+<header class="site">
+  <span><svg width="44" height="44" viewBox="0 0 240 240" role="img" aria-label="FehlerFuchs"><use href="#badge"/></svg></span>
+  <h1>FehlerFuchs</h1>
+</header>
+<nav>
+  <a href="index.html">Start</a><a href="downloads.html">Downloads</a><a href="produkte.html">Produktseiten</a><a href="unterstuetzen.html">Unterstützen</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a>
+</nav>
+
+<main>
+  <section class="hero" aria-labelledby="seiten-titel">
+    <div>
+      <h2 id="seiten-titel">Unterstütze FehlerFuchs</h2>
+      <p class="sub">Damit aus kleinen Ideen echte Helfer werden.</p>
+      <p>FehlerFuchs entsteht nicht in einem großen Büro, sondern Schritt für Schritt am Schreibtisch – mit viel Herzblut, vielen Ideen und manchmal auch mit einer sehr notwendigen Tasse Kaffee daneben.</p>
+      <p>Der Weg bis zu fertigen Produkten ist lang. Hardware, Testgeräte, Büroausstattung, Werkzeuge, Website, Backups und all die kleinen Dinge drumherum kosten mehr, als man am Anfang denkt.</p>
+      <p><strong>Aber eins ist klar: Ich gebe nicht auf.</strong></p>
+      <div class="ctas">
+        <a class="cta" href="#paypal">Projekt unterstützen</a>
+        <a class="cta ghost" href="#warum">Mehr erfahren</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg class="deskmark" viewBox="0 0 512 480"><use href="#desk"/></svg>
+    </div>
+  </section>
+
+  <section id="warum" aria-labelledby="warum-title">
+    <div class="sec-head">
+      <h2 class="sec" id="warum-title">Warum Unterstützung hilft</h2>
+      <p class="lead">FehlerFuchs ist ein kleines, unabhängiges Projekt. Entwicklung kostet Zeit, gute Software braucht Tests, und auch kleine Werkzeuge brauchen eine verlässliche Grundlage.</p>
+    </div>
+    <p>Mit deiner Unterstützung hilfst du mir direkt dabei, FehlerFuchs schneller weiterzuentwickeln und Produkte fertigzustellen, die echten Menschen helfen: kleinen Selbstständigen, Familien, Vereinen, Ehrenamtlichen und allen, die einfache, faire und bezahlbare digitale Helfer gebrauchen können.</p>
+    <p class="muted">Das Ziel bleibt dabei bodenständig: FehlerFuchs soll bezahlbar bleiben und nicht zur nächsten komplizierten, cloudlastigen Abo-Falle werden.</p>
+  </section>
+
+  <section aria-labelledby="wofuer-title">
+    <div class="sec-head">
+      <h2 class="sec" id="wofuer-title">Wofür Unterstützung genutzt wird</h2>
+      <p class="muted">Keine große Show, sondern die Dinge, die ein kleines Softwareprojekt wirklich braucht.</p>
+    </div>
+    <div class="grid">
+      <article class="tile"><div class="ico">HW</div><h3>Hardware &amp; Testgeräte</h3><p>Damit FehlerFuchs nicht nur auf einem Rechner funktioniert, sondern zuverlässig auf unterschiedlichen Geräten getestet werden kann.</p></article>
+      <article class="tile"><div class="ico">BU</div><h3>Büroausstattung</h3><p>Ein brauchbarer Arbeitsplatz, Kabel, Adapter, Druckerzeugnisse und Kleinkram sind weniger glamourös als Code, aber genauso nötig.</p></article>
+      <article class="tile"><div class="ico">DEV</div><h3>Entwicklungswerkzeuge</h3><p>Gute Werkzeuge sparen Zeit, vermeiden Fehler und helfen dabei, stabile Versionen schneller fertigzustellen.</p></article>
+      <article class="tile"><div class="ico">WEB</div><h3>Website &amp; Infrastruktur</h3><p>Domains, Speicherplatz, sichere Ablage und laufende Bereitstellung kosten Geld – auch bei einem kleinen Projekt.</p></article>
+      <article class="tile"><div class="ico">SEC</div><h3>Backups &amp; Sicherheit</h3><p>Quellcode, Entwürfe, Dokumente und Downloads müssen sauber gesichert werden, damit Arbeit nicht verloren geht.</p></article>
+      <article class="tile"><div class="ico">KA</div><h3>Die berühmte Tasse Kaffee</h3><p>Manchmal ist genau sie der Unterschied zwischen „ich höre für heute auf“ und „okay, ich mache den Fehler noch fertig“.</p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="ziel-title" class="goal-band">
+    <h2 class="sec" id="ziel-title">Was FehlerFuchs erreichen will</h2>
+    <p>FehlerFuchs soll Software bauen, die nicht größer tut als sie ist, sondern einfach hilft. Kleine Werkzeuge für den Alltag, für den „kleinen Bürger“, für Menschen, die eine Aufgabe erledigen wollen – ohne Konto-Zwang, ohne Cloud-Pflicht und ohne unnötiges Durcheinander.</p>
+    <ul class="goal-list">
+      <li>lokale Helfer-Apps für PC und Smartphone</li>
+      <li>verständliche Funktionen statt Fachchinesisch</li>
+      <li>keine Abo-Falle als Grundprinzip</li>
+      <li>bezahlbare Lösungen für kleine Budgets</li>
+      <li>praxisnah für Familien, Vereine und Ehrenamt</li>
+      <li>faire Werkzeuge für kleine Selbstständige</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="persoenlich-title" class="personal">
+    <img src="img/matze-portrait-sw.jpg" alt="Matthias (Matze) von FehlerFuchs" loading="lazy" width="82" height="82">
+    <div>
+      <h2 class="sec" id="persoenlich-title">Ein persönliches Wort</h2>
+      <p>Ich baue FehlerFuchs Stück für Stück weiter. Neben Alltag, Familie und Beruf. Manches dauert dadurch länger, als ich es gern hätte, aber genau deshalb ist mir wichtig, ehrlich zu bleiben.</p>
+      <p>Ich will keine aufgeblasenen Versprechen machen. Ich will kleine, stabile Helfer bauen, die für echte Menschen nützlich sind. Der Weg ist lang, aber ich werde nicht aufgeben.</p>
+      <p class="muted">Danke an alle, die mitlesen, testen, Rückmeldung geben oder FehlerFuchs weiterempfehlen. Das ist mehr wert, als es von außen manchmal aussieht.</p>
+    </div>
+  </section>
+
+  <section id="paypal" aria-labelledby="paypal-title" class="support-band">
+    <div>
+      <h2 id="paypal-title">FehlerFuchs unterstützen</h2>
+      <p>Wenn du FehlerFuchs unterstützen möchtest, kannst du das freiwillig über PayPal tun. Jede Unterstützung hilft dabei, Entwicklung, Testgeräte, Infrastruktur, Werkzeuge und die berühmte Tasse Kaffee auf dem Schreibtisch mitzufinanzieren.</p>
+      <p class="legal-note">Die Unterstützung ist freiwillig. Sie ist keine Voraussetzung, um FehlerFuchs zu nutzen. Es wird keine Spendenbescheinigung ausgestellt und es handelt sich nicht um eine steuerlich absetzbare Spende.</p>
+    </div>
+    <div>
+      <div class="paypal-slot">
+        <div class="paypal-sdk-note">PayPal-Client-ID im SDK-Script ergänzen<span>Die Hosted-Button-ID ist vorbereitet: ARHM75WKUT5AU.</span></div>
+        <div id="paypal-container-ARHM75WKUT5AU"></div>
+      </div>
+      <script>
+        if (window.paypal && typeof paypal.HostedButtons === "function") {
+          var paypalNote = document.querySelector(".paypal-sdk-note")
+          if (paypalNote) paypalNote.hidden = true
+          paypal.HostedButtons({
+            hostedButtonId: "ARHM75WKUT5AU",
+          }).render("#paypal-container-ARHM75WKUT5AU")
+        }
+      </script>
+    </div>
+  </section>
+
+  <section aria-labelledby="anders-title">
+    <div class="sec-head">
+      <h2 class="sec" id="anders-title">Andere Arten zu helfen</h2>
+      <p class="lead">Du musst nicht finanziell unterstützen, um zu helfen.</p>
+      <p>Auch Feedback, Weiterempfehlungen und ehrliche Rückmeldungen helfen enorm. Jede echte Nutzung zeigt, wo FehlerFuchs besser werden muss.</p>
+    </div>
+    <ul class="help-list">
+      <li>FehlerFuchs weiterempfehlen</li>
+      <li>Feedback geben</li>
+      <li>Fehler melden</li>
+      <li>Ideen einreichen</li>
+      <li>Beta testen</li>
+      <li>Screenshots und Erfahrungen teilen</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="transparenz-title" class="transparency">
+    <h2 id="transparenz-title">Transparenz</h2>
+    <p>Deine Unterstützung ist freiwillig. Sie hilft bei Entwicklung, Tests, Infrastruktur und Projektkosten. Sie ist keine Voraussetzung für die Nutzung freier FehlerFuchs-Angebote. Eine Spendenbescheinigung wird nicht ausgestellt.</p>
+  </section>
+</main>
+
+<footer>© 2026 Matthias Schacht · FehlerFuchs und seine Apps. Datensparsam, ohne Cloud und ohne Tracking.</footer>
+
+</body>
+</html>
