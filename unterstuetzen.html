@@ -75,7 +75,12 @@
   .paypal-sdk-note span{display:block;color:var(--muted);font-weight:400;font-size:.88rem;margin-top:6px}
   .legal-note{background:#fcf8f3;border:1px solid #ecdfd2;border-radius:12px;padding:13px 15px;color:var(--muted);font-size:.9rem;margin-top:16px}
   .help-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:12px}
-  .help-list li{background:#fff;border:1px solid #ecdfd2;border-radius:12px;padding:11px 13px;font-weight:600;color:var(--brown)}
+  .help-list li{display:flex}
+  .help-action{width:100%;min-height:86px;background:#fff;border:1px solid #ecdfd2;border-radius:12px;padding:13px 14px;color:var(--brown);font:inherit;text-align:left;display:flex;flex-direction:column;justify-content:center;gap:3px;cursor:pointer}
+  .help-action:hover,.help-action:focus-visible{background:#fcf8f3;text-decoration:none;border-color:#e2c8ae;outline:2px solid transparent;box-shadow:0 0 0 3px rgba(217,119,6,.16)}
+  .help-action strong{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:.98rem;line-height:1.25}
+  .help-action span{color:var(--muted);font-size:.86rem;line-height:1.35;font-weight:400}
+  .share-status{margin-top:10px;color:var(--muted);font-size:.9rem;min-height:1.4em}
   .transparency{background:#2B160B;color:#fff;border-radius:16px;padding:20px 22px}
   .transparency h2{font-size:1.22rem;margin-bottom:6px;color:#FCE08A}
   .transparency p{color:#fff7ed;margin:0}
@@ -218,13 +223,14 @@
       <p>Auch Feedback, Weiterempfehlungen und ehrliche Rückmeldungen helfen enorm. Jede echte Nutzung zeigt, wo FehlerFuchs besser werden muss.</p>
     </div>
     <ul class="help-list">
-      <li>FehlerFuchs weiterempfehlen</li>
-      <li>Feedback geben</li>
-      <li>Fehler melden</li>
-      <li>Ideen einreichen</li>
-      <li>Beta testen</li>
-      <li>Screenshots und Erfahrungen teilen</li>
+      <li><button class="help-action" type="button" data-share-url="https://fehlerfuchs.eu/" data-share-title="FehlerFuchs" data-share-text="Kleine, lokale Helfer-Apps ohne Cloud-Pflicht und ohne Tracking."><strong>FehlerFuchs weiterempfehlen</strong><span>Startseite teilen oder Link kopieren.</span></button></li>
+      <li><a class="help-action" href="mailto:support@fehlerfuchs.eu?subject=Feedback%20zu%20FehlerFuchs&body=Hallo%20Matze%2C%0A%0Amein%20Feedback%20zu%20FehlerFuchs%3A%0A%0A"><strong>Feedback geben</strong><span>Direkt an support@fehlerfuchs.eu.</span></a></li>
+      <li><a class="help-action" href="mailto:support@fehlerfuchs.eu?subject=Fehler%20melden%20-%20FehlerFuchs&body=Hallo%20Matze%2C%0A%0Aich%20habe%20folgenden%20Fehler%20gefunden%3A%0A%0AWas%20ist%20passiert%3F%0A%0AWo%20ist%20es%20passiert%3F%0A%0AGer%C3%A4t%20%2F%20System%3A%0A%0A"><strong>Fehler melden</strong><span>Mit kurzer Vorlage per E-Mail.</span></a></li>
+      <li><a class="help-action" href="mailto:support@fehlerfuchs.eu?subject=Idee%20f%C3%BCr%20FehlerFuchs&body=Hallo%20Matze%2C%0A%0Aich%20habe%20eine%20Idee%20f%C3%BCr%20FehlerFuchs%3A%0A%0A"><strong>Ideen einreichen</strong><span>Vorschlag direkt losschicken.</span></a></li>
+      <li><a class="help-action" href="mailto:support@fehlerfuchs.eu?subject=Beta%20testen%20-%20FehlerFuchs&body=Hallo%20Matze%2C%0A%0Aich%20w%C3%BCrde%20gern%20Beta-Versionen%20von%20FehlerFuchs%20testen.%0A%0AInteressant%20f%C3%BCr%20mich%20ist%3A%0A%0AMein%20System%20%2F%20Ger%C3%A4t%3A%0A%0A"><strong>Beta testen</strong><span>Interesse für Testversionen melden.</span></a></li>
+      <li><a class="help-action" href="mailto:support@fehlerfuchs.eu?subject=Erfahrung%20teilen%20-%20FehlerFuchs&body=Hallo%20Matze%2C%0A%0Aich%20m%C3%B6chte%20eine%20Erfahrung%20oder%20einen%20Screenshot%20zu%20FehlerFuchs%20teilen%3A%0A%0A"><strong>Screenshots und Erfahrungen teilen</strong><span>Per E-Mail an den Support.</span></a></li>
     </ul>
+    <p class="share-status" aria-live="polite"></p>
   </section>
 
   <section aria-labelledby="transparenz-title" class="transparency">
@@ -234,6 +240,32 @@
 </main>
 
 <footer>© 2026 Matthias Schacht · FehlerFuchs und seine Apps. Datensparsam, ohne Cloud und ohne Tracking.</footer>
+
+<script>
+  var shareButton = document.querySelector("[data-share-url]")
+  var shareStatus = document.querySelector(".share-status")
+  if (shareButton) {
+    shareButton.addEventListener("click", async function () {
+      var shareData = {
+        title: shareButton.dataset.shareTitle,
+        text: shareButton.dataset.shareText,
+        url: shareButton.dataset.shareUrl
+      }
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData)
+          if (shareStatus) shareStatus.textContent = "Danke fürs Weiterempfehlen."
+          return
+        }
+        await navigator.clipboard.writeText(shareData.url)
+        if (shareStatus) shareStatus.textContent = "Link zur Startseite wurde kopiert."
+      } catch (error) {
+        if (error && error.name === "AbortError") return
+        if (shareStatus) shareStatus.textContent = "Link zur Startseite: " + shareData.url
+      }
+    })
+  }
+</script>
 
 </body>
 </html>
