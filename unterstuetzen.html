@@ -62,9 +62,15 @@
   .personal{display:grid;grid-template-columns:82px minmax(0,1fr);gap:18px;align-items:start;background:var(--cream);border:1px solid #f0e0cf;border-radius:16px;padding:20px 22px}
   .personal img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:4px solid #fff;box-shadow:0 3px 12px rgba(43,22,11,.18)}
   .personal p{margin-bottom:9px}
-  .support-band{background:#fff;border:1px solid #ecdfd2;border-radius:18px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,.8fr);gap:22px;align-items:start;box-shadow:0 8px 22px rgba(124,63,22,.055)}
+  .support-band{background:#fff;border:1px solid #ecdfd2;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:20px;align-items:stretch;box-shadow:0 8px 22px rgba(124,63,22,.055)}
+  .support-band>div:first-child{max-width:720px}
   .support-band h2{font-size:1.35rem;color:var(--brown);margin-bottom:8px}
-  .paypal-slot{border:1px solid #f0d6c4;background:#fffaf5;border-radius:14px;padding:18px;min-height:160px;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;text-align:center}
+  .paypal-slot{border:1px solid #f0d6c4;background:#fffaf5;border-radius:14px;padding:18px;min-height:160px;display:flex;flex-direction:column;gap:14px;align-items:stretch;justify-content:flex-start;text-align:center;overflow:hidden}
+  #paypal-container-ARHM75WKUT5AU{width:100%;max-width:680px;min-width:0;margin:0 auto}
+  #paypal-container-ARHM75WKUT5AU iframe{max-width:100%}
+  #paypal-container-ARHM75WKUT5AU img{max-width:100%!important;height:auto!important;object-fit:contain!important}
+  #paypal-container-ARHM75WKUT5AU .hero-container{aspect-ratio:auto!important;height:auto!important;overflow:visible!important}
+  #paypal-container-ARHM75WKUT5AU .hero-img{aspect-ratio:auto!important;width:100%!important;height:auto!important}
   .paypal-sdk-note{color:var(--brown);font-weight:700}
   .paypal-sdk-note span{display:block;color:var(--muted);font-weight:400;font-size:.88rem;margin-top:6px}
   .legal-note{background:#fcf8f3;border:1px solid #ecdfd2;border-radius:12px;padding:13px 15px;color:var(--muted);font-size:.9rem;margin-top:16px}
