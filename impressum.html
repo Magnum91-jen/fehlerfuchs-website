@@ -27,6 +27,9 @@
   h2:first-of-type{margin-top:0}
   p{margin:6px 0}
   .muted{color:var(--muted);font-size:.85rem}
+  .applist{display:flex;flex-wrap:wrap;gap:10px 12px;margin:12px 0 8px;padding:0;list-style:none}
+  .applist a{display:inline-flex;align-items:center;font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:-.3px;color:var(--brown);background:var(--cream);border:1px solid #f0e0cf;border-radius:12px;padding:8px 14px;text-decoration:none}
+  .applist a:hover{border-color:#e2c8ae;background:#fff}
   footer{margin-top:22px;color:var(--muted);font-size:.82rem;border-top:1px solid #ecdfd2;padding-top:14px}
 </style>
 </head>
@@ -68,7 +71,16 @@
     <p>FehlerFuchs wird als Kleinunternehmen gemäß § 19 UStG geführt. Umsatzsteuer wird nicht ausgewiesen.</p>
 
     <h2>Marke &amp; Apps</h2>
-    <p><strong>FehlerFuchs</strong> ist die Marke und Website unter <a href="https://fehlerfuchs.eu">fehlerfuchs.eu</a>. Sichtbar im Vordergrund stehen derzeit <strong>MobileReport</strong> und <strong>FehlerFuchs KleinGewerbe</strong>; weitere kleine Helfer folgen, sobald sie reif genug sind.</p>
+    <p><strong>FehlerFuchs</strong> ist die Marke und Website unter <a href="https://fehlerfuchs.eu">fehlerfuchs.eu</a>. Dazu gehören diese Apps und Programme – ein Klick aufs Logo öffnet die Produktseite:</p>
+    <ul class="applist">
+      <li><a href="apps/mobilereport.html">Mobile<span style="color:#2E7D46">Report</span></a></li>
+      <li><a href="apps/kleingewerbe.html">Klein<span style="color:#B45309">Gewerbe</span></a></li>
+      <li><a href="apps/checkin-vita.html">CheckIn<span style="color:#5B8A72">Vita</span></a></li>
+      <li><a href="apps/appinsight.html">App<span style="color:#2563EB">Insight</span></a></li>
+      <li><a href="apps/fuchsbau.html">Fuchs<span style="color:#3B6B4E">Bau</span></a></li>
+      <li><a href="apps/cleandesk.html">Clean<span style="color:#0E7490">Desk</span></a></li>
+      <li><a href="apps/pdfuchs.html"><span style="color:#9F1239">PDF</span>uchs</a></li>
+    </ul>
     <p class="muted">Einzelne Apps und Programme befinden sich derzeit in Entwicklung bzw. Beta. Veröffentlicht werden nur die jeweils auf dieser Website angebotenen Versionen.</p>
 
     <h2>Copyright &amp; Nutzung</h2>
