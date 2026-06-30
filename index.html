@@ -316,6 +316,21 @@
         <circle cx="86" cy="56" r="5" fill="url(#cdBrass)"/>
       </g>
     </g>
+    <g id="fox-pdf">
+      <g transform="translate(300,300)">
+        <path d="M0,0 H110 L154,44 V228 H0 Z" fill="#FFF7ED" stroke="#7F1D1D" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M110,0 V44 H154 Z" fill="#E7C3CC" stroke="#7F1D1D" stroke-width="8" stroke-linejoin="round"/>
+        <g stroke="#9F1239" stroke-width="11" stroke-linecap="round"><line x1="28" y1="90" x2="126" y2="90"/><line x1="28" y1="130" x2="126" y2="130"/><line x1="28" y1="170" x2="92" y2="170"/></g>
+      </g>
+      <g transform="translate(20,10)">
+        <path d="M96,96 L186,150 L256,185 L326,150 L416,96 L396,250 L256,440 L116,250 Z" fill="#D97706"/>
+        <path d="M132,120 L186,150 L158,182 Z" fill="#7C3F16"/><path d="M380,120 L326,150 L354,182 Z" fill="#7C3F16"/>
+        <path d="M198,250 L314,250 L256,430 Z" fill="#FFF7ED"/>
+        <circle cx="206" cy="236" r="26" fill="#7C3F16"/><circle cx="206" cy="236" r="19" fill="#0E2540"/><circle cx="206" cy="236" r="11" fill="#2563EB"/><circle cx="206" cy="236" r="5" fill="#7DD3FC"/>
+        <circle cx="306" cy="236" r="30" fill="#7C3F16"/><circle cx="306" cy="236" r="22" fill="#0E2540"/><circle cx="306" cy="236" r="13" fill="#2563EB"/><circle cx="306" cy="236" r="6" fill="#7DD3FC"/>
+        <path d="M243,372 L269,372 L256,392 Z" fill="#2B160B"/>
+      </g>
+    </g>
   </defs></svg>
 
   <section class="hero">
@@ -431,6 +446,15 @@
       </div>
       <p class="ctag">Aufräumen mit Plan – nichts geht verloren.</p>
       <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#0E7490" href="apps/cleandesk.html">Zur Produktseite</a></div>
+    </article>
+
+    <article class="app-card">
+      <div class="lk">
+        <svg viewBox="0 0 512 512" role="img" aria-label="PDFuchs"><use href="#fox-pdf"/></svg>
+        <div><div class="cw"><span style="color:#9F1239">PDF</span>uchs</div><div class="von">von FehlerFuchs · neu</div></div>
+      </div>
+      <p class="ctag">PDF-Vollsuite: Word → ausfüllbares PDF, zusammenführen, teilen u. v. m.</p>
+      <div class="cfoot"><span class="cbadge">lokal · kein Tracking</span><a class="cgo" style="background:#9F1239" href="apps/pdfuchs.html">Zur Produktseite</a></div>
     </article>
 
   </div>
@@ -785,6 +809,40 @@
 
         <h3>Status</h3>
         <p><strong>In Entwicklung · Windows</strong> – das Konzept steht; der Download erscheint hier, sobald die erste Version steht.</p>
+        <div><a class="cta soon">⬇ Bald als Download</a></div>
+      </div>
+    </details>
+
+    <!-- FehlerFuchs PDFuchs – PDF-Vollsuite, in Entwicklung -->
+    <details class="app-acc">
+      <summary>
+        <svg class="lockup" viewBox="0 0 720 150" role="img" aria-label="PDFuchs">
+          <use href="#fox-pdf" transform="translate(8,-14) scale(0.34)"/>
+          <text class="wm" x="150" y="92" font-size="62"><tspan fill="#9F1239">PDF</tspan>uchs</text>
+        </svg>
+        <span class="sumright">
+          <span class="badge">In Entwicklung · Windows &amp; Android</span>
+          <span class="more">
+            <span class="lbl-closed">Mehr erfahren</span>
+            <span class="lbl-open">Weniger anzeigen</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </span>
+        </span>
+      </summary>
+      <div class="app-body">
+        <h3 class="first">Was ist <span style="color:#9F1239;font-weight:900">PDF</span>uchs?</h3>        <p style="margin:2px 0 8px"><a class="cta" href="apps/pdfuchs.html" style="margin-top:0;padding:8px 15px;font-size:.88rem">Zur Produktseite →</a></p>
+        <p>Eine lokale, verständliche <strong>PDF-Vollsuite</strong> für Selbstständige, Vereine und kleine Büros. Kernstück: aus <strong>Word-Dateien</strong> werden komfortabel <strong>ausfüllbare PDF-Formulare</strong>. Dazu PDFs zusammenführen, teilen, Seiten drehen/sortieren, komprimieren, stempeln und PDF/A erzeugen – <strong>100 % lokal</strong>, ohne Cloud, ohne Konto.</p>
+        <h3>Funktionen (geplant)</h3>
+        <ul>
+          <li>DOCX → PDF und DOCX → <strong>ausfüllbares</strong> PDF-Formular</li>
+          <li>Formularfelder automatisch erkennen und manuell setzen (Text, Checkbox, Datum, Unterschrift …)</li>
+          <li>Zusammenführen, teilen, Seiten löschen/drehen/sortieren, komprimieren, stempeln</li>
+          <li>PDF/A-Archivversion; OCR &amp; echte Schwärzung perspektivisch</li>
+        </ul>
+        <h3>Datenschutz zuerst</h3>
+        <p><span class="pill">Keine Cloud</span><span class="pill">Kein Konto</span><span class="pill">Keine Telemetrie</span><span class="pill">Werbefrei</span><span class="pill">Nur lokal</span></p>
+        <h3>Status</h3>
+        <p><strong>In Entwicklung · Windows &amp; Android geplant</strong> – Zielbild &amp; Konzept stehen. <strong>Komplett kostenlos.</strong> Der Download erscheint hier, sobald die erste Version steht.</p>
         <div><a class="cta soon">⬇ Bald als Download</a></div>
       </div>
     </details>
