@@ -38,6 +38,16 @@
   .cta{display:inline-block;background:var(--orange);color:#fff;font-weight:600;padding:11px 18px;border-radius:12px;font-size:.92rem}
   .cta:hover{background:#b45309;text-decoration:none}
   .cta.ghost{background:#fff;color:var(--action);border:1px solid #f0d6c4}
+  .badge.launch{background:#FEF3E2;color:#9A5B0E;border-color:#F3D9B0}
+  .store-soon{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #e4d4c4;border-radius:12px;padding:8px 14px;color:var(--brown);font-family:'Poppins',-apple-system,sans-serif;line-height:1.15;cursor:default;user-select:none}
+  .store-soon svg{color:#2E7D46;flex:none}
+  .store-soon small{display:block;font-size:.6rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .store-soon b{font-size:.98rem;font-weight:700}
+  .hero-note{font-size:.8rem;color:var(--muted);margin-top:8px}
+  .launch-band{display:flex;gap:14px;align-items:flex-start;background:#FFF7ED;border:1px solid #f0e0cf;border-left:4px solid #2E7D46;border-radius:14px;padding:16px 18px;margin-top:18px}
+  .launch-band svg{flex:none}
+  .launch-band h3{font-size:1.04rem;color:var(--brown);margin-bottom:4px}
+  .launch-band p{font-size:.92rem;margin:0;color:var(--ink)}
 
   section{margin-top:34px}
   h2.sec{font-size:1.4rem;color:var(--brown);margin-bottom:10px}
@@ -54,18 +64,10 @@
   ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;width:28px;height:28px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:.95rem}
   ol.steps strong{color:var(--brown)}
 
-  /* App-Mockups im echten MR-Dunkel-Theme */
-  .shots{background:#160d06;border-radius:18px;padding:24px 18px;margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
-  .phone{width:208px;background:#1a1008;border:6px solid #34261a;border-radius:26px;padding:14px 12px;color:#F0E8DC;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-  .phone .pt{font-family:'Poppins';font-weight:700;font-size:.86rem;color:#F4A261;margin-bottom:10px;display:flex;align-items:center;gap:6px}
-  .phone .fld{background:#2a1f12;border-radius:9px;padding:8px 10px;margin:6px 0;font-size:.74rem;color:#F0E8DC}
-  .phone .fld .lab{color:#9C7A5A;font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
-  .phone .chip{display:inline-block;background:#3a2a18;color:#F4A261;border-radius:20px;padding:2px 9px;font-size:.66rem;font-weight:700;margin:2px 4px 2px 0}
-  .phone .btn{background:#F4A261;color:#1a1008;border-radius:9px;padding:9px;text-align:center;font-weight:700;font-size:.76rem;margin-top:10px;font-family:'Poppins'}
-  .phone .row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #2a1f12;padding:7px 0;font-size:.74rem}
-  .phone .row .n{color:#9C7A5A;font-size:.66rem}
-  .phone .ok{color:#7CC36B;font-size:.66rem;font-weight:700}
-  .shots-note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:10px}
+  /* Echte Store-Screenshots aus dem Release */
+  .shots{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .shots img{width:208px;max-width:46vw;height:auto;border-radius:18px;border:1px solid #ecdfd2;box-shadow:0 10px 28px rgba(0,0,0,.14);background:#fff}
+  .shots-note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:12px}
 
   /* Editionen-Tabelle */
   .tablewrap{overflow-x:auto;margin-top:8px;border:1px solid #ecdfd2;border-radius:14px}
@@ -124,16 +126,30 @@
     <h1>FehlerFuchs Mobile<span class="r">Report</span></h1>
     <p class="tag">Das kleine, lokale Melde-Logbuch für Geräte – schnell erfasst, sauber als PDF, direkt per Mail vorbereitet. Alles bleibt auf deinem Gerät.</p>
     <div class="badges">
-      <span class="badge">Privat-Beta · Android</span>
+      <span class="badge launch">Im Launch · bei Google Play in Prüfung</span>
+      <span class="badge">Android</span>
       <span class="badge">100 % lokal</span>
       <span class="badge">werbefrei</span>
     </div>
     <div class="cta-row">
-      <a class="cta" href="../kontakt.html?app=MobileReport&topic=interesse">Kontakt aufnehmen</a>
+      <span class="store-soon" role="img" aria-label="MobileReport erscheint demnächst bei Google Play">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span><small>Demnächst bei</small><b>Google Play</b></span>
+      </span>
+      <a class="cta" href="../kontakt.html?app=MobileReport&topic=beta">Zum Start benachrichtigen</a>
       <a class="cta ghost" href="#editionen">Editionen ansehen</a>
     </div>
+    <p class="hero-note">Der Play-Store-Link wird hier aktiv, sobald Google die App freigegeben hat.</p>
   </div>
 </header>
+
+<div class="launch-band">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#2E7D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+  <div>
+    <h3>Im Launch – jetzt bei Google Play</h3>
+    <p>MobileReport (Free) ist bei Google Play eingereicht und wird gerade geprüft. Sobald Google die App freigibt – bei einer ersten App meist wenige Tage, bei einem neuen Entwicklerkonto auch mal etwas länger – erscheint sie im Play Store und lässt sich für alle installieren. Ab dann wird der Play-Store-Button auf dieser Seite aktiv.</p>
+  </div>
+</div>
 
 <!-- ÜBERBLICK -->
 <section>
@@ -167,32 +183,15 @@
     <li><strong>Senden &amp; bestätigen:</strong> selbst senden und im Logbuch als „versendet" markieren.</li>
   </ol>
 
-  <div class="shots" role="img" aria-label="Beispielhafte App-Ansichten von MobileReport">
-    <div class="phone">
-      <div class="pt">🦊 Neue Meldung</div>
-      <div class="fld"><span class="lab">Gerät</span>Beamer Raum 2.14</div>
-      <div class="fld"><span class="lab">Bereich</span>Konferenzraum</div>
-      <div class="fld"><span class="lab">Priorität</span><span class="chip">Hoch</span><span class="chip">Mittel</span></div>
-      <div class="fld"><span class="lab">Beschreibung</span>Kein Bild, Lüfter sehr laut …</div>
-      <div class="btn">Foto hinzufügen</div>
-    </div>
-    <div class="phone">
-      <div class="pt">🦊 PDF-Vorschau</div>
-      <div class="fld"><span class="lab">Logbuch-Nr.</span>MR-2026-0042</div>
-      <div class="fld" style="height:78px">Meldung &middot; Foto &middot; Details
-        <div style="margin-top:6px;height:38px;background:#34261a;border-radius:6px"></div></div>
-      <div class="fld"><span class="lab">Empfänger</span>haustechnik@…</div>
-      <div class="btn">E-Mail vorbereiten</div>
-    </div>
-    <div class="phone">
-      <div class="pt">🦊 Logbuch</div>
-      <div class="row"><span>Beamer 2.14<span class="n"> · heute</span></span><span class="ok">gesendet</span></div>
-      <div class="row"><span>Drucker Flur<span class="n"> · Mo</span></span><span class="ok">gesendet</span></div>
-      <div class="row"><span>Spülmaschine<span class="n"> · Fr</span></span><span style="color:#F4A261;font-size:.66rem;font-weight:700">offen</span></div>
-      <div class="row"><span>Türsensor<span class="n"> · 12.06.</span></span><span class="ok">gesendet</span></div>
-    </div>
+  <div class="shots" role="group" aria-label="App-Ansichten von MobileReport">
+    <img src="../img/screenshots/store_01_home.png" alt="Startbildschirm: schnell eine neue Meldung erfassen" width="1080" height="1920" loading="lazy">
+    <img src="../img/screenshots/store_02_erfassen.png" alt="Meldung erfassen, Foto oder Beschreibung hinzufügen" width="1080" height="1920" loading="lazy">
+    <img src="../img/screenshots/store_03_pdf.png" alt="PDF-Vorschau der Meldung" width="1080" height="1920" loading="lazy">
+    <img src="../img/screenshots/store_04_senden.png" alt="E-Mail wird selbst über die Mail-App gesendet" width="1080" height="1920" loading="lazy">
+    <img src="../img/screenshots/store_05_logbuch.png" alt="Lokales Logbuch der erstellten Meldungen" width="1080" height="1920" loading="lazy">
+    <img src="../img/screenshots/store_06_darkmode.png" alt="Dunkelmodus in den Einstellungen" width="1080" height="1920" loading="lazy">
   </div>
-  <p class="shots-note">Illustrative Ansichten im App-Design – die fertige App kann im Detail abweichen.</p>
+  <p class="shots-note">Echte Ansichten aus der App (Android).</p>
 </section>
 
 <!-- EDITIONEN -->
@@ -220,7 +219,7 @@
         <tr><td>Geräteübergreifend synchronisiertes Logbuch</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
         <tr><td>Anbindung an firmeneigene Systeme/Server</td><td class="no">–</td><td>optional</td><td class="yes">individuell</td><td>optional</td></tr>
         <tr><td>App unter eigenem Namen/Logo (im Store)</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td></tr>
-        <tr><td>Status</td><td>Privat-Beta</td><td>Beta in Kürze</td><td>auf Anfrage</td><td>auf Anfrage</td></tr>
+        <tr><td>Status</td><td>Im Launch (Google Play)</td><td>Beta in Kürze</td><td>auf Anfrage</td><td>auf Anfrage</td></tr>
       </tbody>
     </table>
   </div>
@@ -240,6 +239,7 @@
 <section>
   <h2 class="sec">Häufige Fragen</h2>
   <div class="faq">
+    <details><summary>Wann ist MobileReport verfügbar?</summary><div class="a">Die <strong>Free</strong>-Edition ist bei <strong>Google Play</strong> eingereicht und wird gerade geprüft. Sobald Google sie freigibt – bei einer ersten App meist wenige Tage, bei einem neuen Konto auch mal etwas länger – erscheint sie im Play Store und ist für alle installierbar; ab dann wird der Play-Store-Button auf dieser Seite aktiv. Wenn du zum Start eine kurze Nachricht möchtest: <a href="../kontakt.html?app=MobileReport&topic=beta">support@fehlerfuchs.eu</a>.</div></details>
     <details><summary>Was kostet MobileReport?</summary><div class="a">Die <strong>Free</strong>-Edition ist kostenlos und werbefrei. <strong>Pro</strong> wird später optional kostenpflichtig sein; <strong>Custom</strong> und <strong>White-Label</strong> nach Aufwand/Angebot. Das Grundlegende bleibt immer kostenlos.</div></details>
     <details><summary>Wo werden meine Daten gespeichert?</summary><div class="a">Ausschließlich lokal auf deinem Gerät. Es gibt keine Cloud, kein Konto und keine Übertragung an uns oder Dritte.</div></details>
     <details><summary>Verschickt die App automatisch E-Mails?</summary><div class="a">Nein. MobileReport bereitet die E-Mail mit Empfänger, Betreff und PDF nur vor – senden tust du selbst in deiner Mail-App.</div></details>
