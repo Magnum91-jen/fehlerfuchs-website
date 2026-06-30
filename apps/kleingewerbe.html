@@ -112,22 +112,30 @@
 
 <section id="editionen">
   <h2 class="sec">Editionen im Vergleich</h2>
+  <p>Eine gemeinsame Codebasis bedient alle drei Editionen. <strong style="color:#7C3AED">Vather</strong> ist die <strong>interne Entwicklerversion</strong> (früher „Mother"): alle Funktionen frei geschaltet und voll editierbar. Sie dient Entwicklung, Test und Datenmigration und wird <strong>nicht öffentlich verteilt</strong>.</p>
   <div class="tablewrap">
     <table class="ed">
-      <thead><tr><th>Merkmal</th><th style="color:#15803D">Free</th><th style="color:#B91C1C">Pro</th></tr></thead>
+      <thead><tr><th>Merkmal</th><th style="color:#15803D">Free</th><th style="color:#B91C1C">Pro</th><th style="color:#7C3AED">Vather</th></tr></thead>
       <tbody>
-        <tr><td>Kunden, Aufträge, Rechnungen, Angebote, Quittungen</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-        <tr><td>Kalender, Aufgaben, Fristen &amp; Terminexport</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-        <tr><td>Logbuch, Statistik, Auswertungen &amp; Berichte</td><td>Basis</td><td class="yes">erweitert</td></tr>
-        <tr><td>E-Mail-Entwürfe &amp; lokales Postfach</td><td>Basis</td><td class="yes">✓</td></tr>
-        <tr><td>PDFuchs, Belege &amp; E-Rechnungs-Prüfung</td><td>Basis</td><td class="yes">✓</td></tr>
-        <tr><td>E-Rechnung erstellen &amp; versenden</td><td class="no">Zielbild</td><td>Zielbild</td></tr>
-        <tr><td>Modulare Erweiterungspakete per Installer</td><td class="no">Zielbild</td><td>Zielbild</td></tr>
-        <tr><td>Einnahmen, Ausgaben &amp; steuerliche Vorbereitung</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-        <tr><td>Hinweis „Erstellt mit FehlerFuchs KleinGewerbe"</td><td>ja</td><td class="no">entfällt</td></tr>
-        <tr><td>Exporte &amp; anpassbares Branding</td><td>eingeschränkt</td><td class="yes">✓</td></tr>
-        <tr><td>Android-Companion-App</td><td class="no">–</td><td>Konzept / in Planung</td></tr>
-        <tr><td>Preis</td><td>kostenlos</td><td>später optional</td></tr>
+        <tr><td>Kunden, Aufträge, Rechnungen, Angebote, Quittungen</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Kalender, Aufgaben, Fristen &amp; Terminexport (ICS)</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Einnahmen, Ausgaben &amp; EÜR-Vorbereitung</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Logbuch, Statistik, Auswertungen &amp; Berichte</td><td>Basis</td><td class="yes">erweitert</td><td class="yes">voll</td></tr>
+        <tr><td>E-Mail-Entwürfe &amp; lokales Postfach (IMAP/SMTP)</td><td>Basis</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>E-Mail-Versand</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>PDFuchs, Belege &amp; E-Rechnungs-Prüfung</td><td>Basis</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>OCR / Texterkennung für Belege</td><td class="no">–</td><td>optional</td><td class="yes">✓</td></tr>
+        <tr><td>E-Rechnung erstellen &amp; versenden (XRechnung/ZUGFeRD)</td><td class="no">Zielbild</td><td>Zielbild</td><td>in Arbeit</td></tr>
+        <tr><td>Paperless-ngx-Archiv-Anbindung</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td></tr>
+        <tr><td>Etiketten-/Label-Druck</td><td class="no">–</td><td>optional</td><td class="yes">✓</td></tr>
+        <tr><td>Datenimport (Stammdaten &amp; Bestände)</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Passwort-Tresor &amp; Account-Verwaltung</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Exporte (CSV/EÜR) &amp; anpassbares Branding</td><td>eingeschränkt</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Modulare Erweiterungspakete per Installer</td><td class="no">Zielbild</td><td>Zielbild</td><td class="yes">alle Module</td></tr>
+        <tr><td>Voll editierbar · Entwickler-Werkzeuge &amp; Selbsttest</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td></tr>
+        <tr><td>Hinweis „Erstellt mit FehlerFuchs KleinGewerbe"</td><td>ja</td><td class="no">entfällt</td><td class="no">entfällt</td></tr>
+        <tr><td>Android-Companion-App</td><td class="no">–</td><td>Konzept / in Planung</td><td>Konzept / in Planung</td></tr>
+        <tr><td>Verfügbarkeit / Preis</td><td>kostenlos</td><td>später optional</td><td>intern · nicht öffentlich</td></tr>
       </tbody>
     </table>
   </div>
@@ -155,6 +163,7 @@
   <h2 class="sec">Häufige Fragen</h2>
   <div class="faq">
     <details><summary>Was kostet das Programm?</summary><div class="a">Die <strong>Free</strong>-Edition ist kostenlos. <strong>Pro</strong> wird später optional kostenpflichtig – das Grundlegende bleibt frei.</div></details>
+    <details><summary>Was ist die „Vather"-Version?</summary><div class="a">Die <strong>interne Entwicklerversion</strong> (früher „Mother"): alle Funktionen frei geschaltet und voll editierbar, inkl. Paperless-ngx-Anbindung, OCR, E-Rechnung, Etiketten und Account-Tresor. Sie dient Entwicklung und Test und wird <strong>nicht öffentlich verteilt</strong>; öffentlich erscheinen nur <strong>Free</strong> und <strong>Pro</strong>.</div></details>
     <details><summary>Wo liegen meine Daten?</summary><div class="a">Im Programmordner auf deinem PC (Datenbank, Backups, PDFs). Nichts wird in eine Cloud übertragen.</div></details>
     <details><summary>Ersetzt es die Steuerberatung?</summary><div class="a">Nein. Es unterstützt, strukturiert und dokumentiert. Steuerliche, rechtliche oder fachliche Entscheidungen bleiben bei dir bzw. deiner Beratung.</div></details>
     <details><summary>Was ist mit E-Rechnungen geplant?</summary><div class="a">Der Empfang, die Erkennung und die Prüfung von E-Rechnungen sind vorbereitet. Das Ziel ist der vollständige Ablauf: aus Rechnungsdaten XRechnung/ZUGFeRD erzeugen, prüfen, versenden, Status dokumentieren und alles beim Kunden bzw. Auftrag ablegen.</div></details>
